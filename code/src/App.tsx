@@ -1,13 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
+import Experience from './routes/Experience';
+import Project from './routes/Project';
 
 export interface IAppProps { }
 
 const App: React.FC<IAppProps> = (props: IAppProps) => {
 
   return (
-    <div>
-      test
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" >
+          <Route index element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="*" element={<h1>404 - Page not found</h1>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
