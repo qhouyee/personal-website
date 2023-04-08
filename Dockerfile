@@ -18,7 +18,7 @@ COPY ./template  .
 FROM builder as development
 
 # Copy all the code into the src folder
-COPY ./code ./src
+COPY ./code/src ./src
 
 # Launch application server in development mode
 CMD ["npm", "run", "dev"]
