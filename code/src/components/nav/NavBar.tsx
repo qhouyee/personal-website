@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink, Outlet } from "react-router-dom";
 import './navbar.scss';
+import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
 
 const NavBar: React.FC = () => {
   return (
     <>
       <nav>
         <NavLink to="/" end>
-          <div class="home">Home</div>
+          <HomeLinkIcon className="home" />
         </NavLink>
         <div className="nav-links">
           <NavLink to="/" end
