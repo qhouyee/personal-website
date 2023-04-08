@@ -1,0 +1,158 @@
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 300;
+  position: fixed;
+  top: 6vh;
+  height: 7%;
+  width: 97%;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+.home {
+  position: relative;
+  left: 2vw;
+  height: 2.4vw;
+  min-height: 20px;
+  width: 2.5vw;
+  min-width: 25px;
+  margin-left: 20%;
+  padding: 20%;
+  border: 4px double #4d4d4e;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+
+  &:hover {
+    border: 4px inset #4d4d4e;
+    box-shadow: unset;
+    transform: scale(0.7);
+  }
+}
+
+.nav-links {
+  justify-content: right;
+  position: relative;
+  right: 1vw;
+
+  >.active {
+    position: relative;
+    height: 5vh;
+    width: 40%;
+    margin: 25px;
+    padding: 10px 14px;
+    background: transparent;
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    text-decoration: none; // To remove the underline for links
+    font-weight: bold;
+    color: transparent;
+    opacity: 1;
+    transition: 0.5s ease-out;
+
+    &:hover {
+      background-image: none;
+      color: #000;
+      transition: 1s ease;
+
+      &::before {
+        top: -5px;
+        left: -10px;
+        border-top: 3px inset #4d4d4e;
+        border-left: 3px inset #4d4d4e;
+      }
+
+      &::after {
+        border-bottom-style: inset;
+        border-right-style: inset;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+
+    &::before {
+      top: -5px;
+      left: -10px;
+      border-top: 3px double #4d4d4e;
+      border-left: 3px double #4d4d4e;
+    }
+
+    &::after {
+      top: 5px;
+      left: 10px;
+      border-bottom: 3px double #4d4d4e;
+      border-right: 3px double #4d4d4e;
+    }
+  }
+}
+
+.pending {
+  position: relative;
+  height: 5vh;
+  width: 40%;
+  margin: 25px;
+  padding: 10px 14px;
+  background: transparent;
+  text-decoration: none; // To remove the underline for links
+  font-weight: normal;
+  color: #000;
+  transition: 0.5s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0;
+    transition: 0.5s ease-out;
+  }
+
+  &::before {
+    top: -2px;
+    left: -5px;
+    border-top: 3px double #4d4d4e;
+    border-left: 3px double #4d4d4e;
+  }
+
+  &::after {
+    top: 2px;
+    left: 5px;
+    border-bottom: 3px double #4d4d4e;
+    border-right: 3px double #4d4d4e;
+  }
+
+  &:hover {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 18px;
+
+    &::before {
+      border-top-style: inset;
+      border-left-style: inset;
+      transform: scale(0.7);
+    }
+
+    &::after {
+      border-bottom-style: inset;
+      border-right-style: inset;
+      transform: scale(0.7);
+    }
+  }
+}
