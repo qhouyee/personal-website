@@ -5,12 +5,13 @@ nav {
   align-items: center;
   z-index: 300;
   position: fixed;
-  top: 6vh;
-  height: 7%;
+  top: 4vh;
+  height: 10%;
   width: 97%;
+  padding: 2% 0 1%;
   background: transparent;
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size:calc(10px + 0.3vw);
 }
 
 .home {
@@ -24,7 +25,7 @@ nav {
   padding: 20%;
   border: 4px double #4d4d4e;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: white;
   box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
 
