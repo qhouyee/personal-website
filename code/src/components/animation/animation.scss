@@ -1,0 +1,33 @@
+.waviy {
+  position: relative;
+  display: inline-block;
+  animation: waviy 1s infinite;
+}
+
+@for $i from 1 through 6 {
+  .waviy_#{$i} {
+    animation-delay: #{0.15 * $i}s;
+  }
+}
+
+.waviy_1:first-child {
+  animation: waviy_1 1s infinite;
+}
+
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-15px)
+  }
+}
+
+@keyframes waviy_1 {
+  0%, 40%, 100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-25px)
+  }
+}
