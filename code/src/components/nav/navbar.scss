@@ -5,17 +5,18 @@ nav {
   align-items: center;
   z-index: 300;
   position: fixed;
-  top: 4vh;
+  top: 2vh;
   height: 10%;
-  width: 97%;
-  padding: 2% 0 1%;
-  background: transparent;
+  width: 100%;
+  padding: 1% 0 0;
+  background: rgba(238, 226, 220, 0.9);
   font-family: 'Poppins', sans-serif;
-  font-size:calc(10px + 0.3vw);
+  font-size: calc(10px + 0.4vw);
 }
 
 .home {
   position: relative;
+  top: 0.5vh;
   left: 2vw;
   height: 2.4vw;
   min-height: 20px;
@@ -23,14 +24,14 @@ nav {
   min-width: 25px;
   margin-left: 20%;
   padding: 20%;
-  border: 4px double #4d4d4e;
+  border: 5px double #08192c;
   border-radius: 50%;
-  background-color: white;
-  box-shadow: 10px 6px 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  box-shadow: 10px 6px 6px rgba(2, 21, 64, 0.3);
   transition: 0.5s;
 
   &:hover {
-    border: 4px inset #4d4d4e;
+    border: 4px inset #08192c;
     box-shadow: unset;
     transform: scale(0.7);
   }
@@ -39,11 +40,12 @@ nav {
 .nav-links {
   justify-content: right;
   position: relative;
-  right: 1vw;
+  right: 4vw;
 
   >.active {
     position: relative;
     height: 5vh;
+    min-height: 20px;
     width: 40%;
     margin: 25px;
     padding: 10px 14px;
@@ -51,7 +53,7 @@ nav {
     background-image: url('../../assets/svg/activenav.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 5vh;
+    background-size: 6vh;
     text-decoration: none; // To remove the underline for links
     font-weight: bold;
     color: transparent;
@@ -60,14 +62,14 @@ nav {
 
     &:hover {
       background-image: none;
-      color: #000;
+      color: #343434;
       transition: 1s ease;
 
       &::before {
         top: -5px;
         left: -10px;
-        border-top: 3px inset #4d4d4e;
-        border-left: 3px inset #4d4d4e;
+        border-top: 3px inset #08192c;
+        border-left: 3px inset #08192c;
       }
 
       &::after {
@@ -89,15 +91,15 @@ nav {
     &::before {
       top: -5px;
       left: -10px;
-      border-top: 3px double #4d4d4e;
-      border-left: 3px double #4d4d4e;
+      border-top: 3px double #08192c;
+      border-left: 3px double #08192c;
     }
 
     &::after {
       top: 5px;
       left: 10px;
-      border-bottom: 3px double #4d4d4e;
-      border-right: 3px double #4d4d4e;
+      border-bottom: 3px double #08192c;
+      border-right: 3px double #08192c;
     }
   }
 }
@@ -111,7 +113,7 @@ nav {
   background: transparent;
   text-decoration: none; // To remove the underline for links
   font-weight: normal;
-  color: #000;
+  color: #343434;
   transition: 0.5s;
 
   &::before,
@@ -128,19 +130,19 @@ nav {
   &::before {
     top: -2px;
     left: -5px;
-    border-top: 3px double #4d4d4e;
-    border-left: 3px double #4d4d4e;
+    border-top: 3px double #08192c;
+    border-left: 3px double #08192c;
   }
 
   &::after {
     top: 2px;
     left: 5px;
-    border-bottom: 3px double #4d4d4e;
-    border-right: 3px double #4d4d4e;
+    border-bottom: 3px double #08192c;
+    border-right: 3px double #08192c;
   }
 
   &:hover {
-    font-size: 14px;
+    font-size: calc(8px + 0.2vw);
     font-weight: 600;
     padding: 15px 18px;
 

@@ -1,7 +1,8 @@
 .waviy {
   position: relative;
   display: inline-block;
-  animation: waviy 1s infinite;
+  color: #dc7027;
+  animation: waviy 1.4s;
 }
 
 @for $i from 1 through 6 {
@@ -11,7 +12,7 @@
 }
 
 .waviy_1:first-child {
-  animation: waviy_1 1s infinite;
+  animation: waviy_1 1.4s;
 }
 
 @keyframes waviy {

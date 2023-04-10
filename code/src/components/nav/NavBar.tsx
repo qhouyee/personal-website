@@ -13,10 +13,10 @@ const NavBar: React.FC = () => {
         <div className="nav-links">
           <NavLink to="/" end
             className={({ isActive }) => isActive ? "active" : "pending"}>
-            Home</NavLink>
+            <span>Home</span></NavLink>
           <NavLink to="/project"
             className={({ isActive }) => isActive ? "active" : "pending"}>
-            Project</NavLink>
+            <span>Project</span></NavLink>
           <NavLink to="/experience"
             className={({ isActive }) => isActive ? "active" : "pending"}>
             Experience</NavLink>

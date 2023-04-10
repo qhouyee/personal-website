@@ -14,18 +14,20 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   return (
     <main>
       <header>
-        <h1 style={{ marginTop: '15%' }}>
+        <div><h1 style={{ marginTop: '15%' }}>
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
             idx={1}
           />
           <br />
-          <span style={{ fontSize: 'calc(12px + 2vw)' }}><b>Hyde</b> here!</span>
+          <span style={{ fontSize: '0.6em' }}><b>Hyde</b> here!</span>
         </h1>
+        </div>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
       </header>
       <section>
+        <h2>About me<span class='dot'>.</span></h2>
         <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
         </p>
       </section>
