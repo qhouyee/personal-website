@@ -1,0 +1,35 @@
+@function multiple-box-shadow($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #EDC7B7';
+
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #EDC7B7';
+  }
+
+  @return unquote($value);
+}
+
+#pixels {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: multiple-box-shadow(700);
+  animation: animPixel 50s linear infinite;
+}
+
+#medium-pixels {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  box-shadow: multiple-box-shadow(200);
+  animation: animPixel 100s linear infinite;
+}
+
+@keyframes animPixel {
+  from {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(-2000px)
+  }
+}

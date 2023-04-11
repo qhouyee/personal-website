@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Background from './components/animation/Background';
 import NavBar from './components/nav/NavBar';
 import Home from './routes/Home';
 import Experience from './routes/Experience';
@@ -11,6 +12,7 @@ const App: React.FC<IAppProps> = (props: IAppProps) => {
 
   return (
     <BrowserRouter>
+      <Background />
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Home />} />
