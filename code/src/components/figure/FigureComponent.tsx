@@ -8,7 +8,7 @@ export interface IFigureComponentProps {
 
 const FigureComponent: React.FC<IFigureComponentProps> = ({ url, alt, cssClass }: IFigureComponentProps) => {
   return (
-    <img src={url} alt={alt} class = {cssClass} />
+    <img src={url} alt={alt} className = {cssClass} />
   );
 };
 

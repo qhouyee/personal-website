@@ -1,4 +1,4 @@
-header {
+.home-route {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -6,6 +6,14 @@ header {
     position: relative;
     height: auto;
     width: 100%;
+
+    >section>h1 {
+        font-family: 'Indie Flower', cursive;
+        font-size: 4em;
+        font-weight: normal;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
 
     >.char-profile {
         position: relative;
@@ -16,12 +24,10 @@ header {
     }
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 8vh;
-    right: auto;
-    height: auto;
-    max-width: 80%;
+.home-text {
+    margin-right: 3vw;
+    
+    >p {
+        font-size: 1rem;
+    }
 }

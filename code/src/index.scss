@@ -62,15 +62,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 15vh 15% 10vh;
+  margin: 15vh 10% 10vh;
   height: auto;
-
-  >header>div>h1 {
-    font-family: 'Indie Flower', cursive;
-    font-size: 4em;
-    font-weight: normal;
-    line-height: 0.8em;
-  }
 }
 
 h2 {
