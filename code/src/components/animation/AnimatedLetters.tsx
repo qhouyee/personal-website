@@ -9,13 +9,13 @@ export interface IAnimatedLettersProps {
 
 const AnimatedLetters: React.FC<IAnimatedLettersProps> = ({ strArray, letterClass, idx }: IAnimatedLettersProps) => {
   return (
-    <span>
+    <>
       {strArray.map((char, i) => (
-        <span key={char + i} className={`${letterClass} ${letterClass}_${i + idx}`}>
+        <div key={char + i} className={`${letterClass} ${letterClass}_${i + idx}`}>
           {char}
-        </span>
+        </div>
       ))}
-    </span>
+    </>
   );
 };
 
