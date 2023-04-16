@@ -3,7 +3,7 @@ import { paragraph } from '../const';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
 import CharProfile from '../assets/png/charprofile.png';
-import './scss/home.scss';
+import './routes.scss';
 
 export interface IHomeProps { }
 

@@ -42,6 +42,14 @@ nav {
   position: relative;
   right: 4vw;
 
+  >a {
+    color: #343434;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   >.active {
     position: relative;
     height: 5vh;
@@ -54,7 +62,6 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 6vh;
-    text-decoration: none; // To remove the underline for links
     font-weight: bold;
     color: transparent;
     opacity: 1;
@@ -113,7 +120,6 @@ nav {
   background: transparent;
   text-decoration: none; // To remove the underline for links
   font-weight: normal;
-  color: #343434;
   transition: 0.5s;
 
   &::before,
