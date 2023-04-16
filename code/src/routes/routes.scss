@@ -1,4 +1,4 @@
-.home-route {
+.first-section {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -6,14 +6,14 @@
     position: relative;
     height: auto;
     width: 100%;
+}
 
-    >.char-profile {
-        position: relative;
-        right: 1vw;
-        height: auto;
-        width: calc(100px + 25vw);
-        margin-left: auto;
-    }
+.char-profile {
+    position: relative;
+    right: 1vw;
+    height: auto;
+    width: calc(100px + 25vw);
+    margin-left: auto;
 }
 
 .home-text {
@@ -25,10 +25,17 @@
 }
 
 .across-line {
-    position:absolute;
+    position: absolute;
     left: 0;
     width: 100vw;
     margin-bottom: 0;
     padding-bottom: 1rem;
     border-top: 3px double #F7986C;
+}
+
+.display-profile {
+    position: relative;
+    left: 1vw;
+    height: auto;
+    width: 20rem;
 }

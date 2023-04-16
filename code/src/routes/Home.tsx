@@ -13,7 +13,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
 
   return (
     <main>
-      <article className='home-route'>
+      <article className='first-section'>
         <section className = 'home-text'>
           <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
@@ -22,7 +22,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
               idx={1}
             />
             <br />
-            <span style={{ fontSize: '0.6em' }}><b>Hyde</b> here!</span>
+            <span style={{ fontSize: '2.5rem' }}><b>Hyde</b> here!</span>
           </h1>
           <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </p>
