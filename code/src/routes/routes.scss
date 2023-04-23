@@ -25,11 +25,10 @@
 }
 
 .across-line {
-    position: absolute;
-    left: 0;
+    position: relative;
+    top:0;
+    left: -15%;
     width: 100vw;
-    margin-bottom: 0;
-    padding-bottom: 1rem;
     border-top: 3px double #F7986C;
 }
 

@@ -13,8 +13,8 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
 
   return (
     <main>
-      <article className='first-section'>
-        <section className = 'home-text'>
+      <section className='first-section' aria-label='Introduction'>
+        <article className = 'home-text' aria-label='Introduction content'>
           <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
               letterClass={letterClass}
@@ -26,9 +26,9 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </h1>
           <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </p>
-        </section>
+        </article>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
-      </article>
+      </section>
     </main>
   );
 };
