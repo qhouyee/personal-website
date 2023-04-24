@@ -1,7 +1,8 @@
 import { React, useState } from 'react';
-import { paragraph } from '../const';
+import { paragraph, experiences } from '../const';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
+import JobListItem from '../components/list/JobListItem';
 import CharProfile from '../assets/png/charprofile.png';
 import './routes.scss';
 
@@ -14,7 +15,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   return (
     <main>
       <section className='first-section' aria-label='Introduction'>
-        <article className = 'home-text' aria-label='Introduction content'>
+        <article className='home-text' aria-label='Introduction content'>
           <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
               letterClass={letterClass}
@@ -28,6 +29,11 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </p>
         </article>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
+      </section>
+      <section aria-label='Experiences'>
+        <ul>
+          {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
+        </ul>
       </section>
     </main>
   );

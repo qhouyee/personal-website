@@ -35,20 +35,20 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
             </div></li>
           </ul>
         </article>
-        </section>
-        <section aria-label='My skills'>
-          <h2>Skills<span className='dot'>.</span></h2>
-          <p>In regards to software technologies, I am familiar with the following stack, but am comfortable picking up new technologies.</p>
-          <SkillComponent />
-        </section>
-        <section aria-label='My working experiences'>
-          <h2>Experiences<span className='dot'>.</span></h2>
-          <div className='across-line'></div>
-          <ul>
-            {experiences.map((experience) => <JobListItem job={experience} />)}
-          </ul>
-        </section>
+      </section>
+      <section aria-label='My skills'>
+        <h2>Skills<span className='dot'>.</span></h2>
+        <p>In regards to software technologies, I am familiar with the following stack, but am comfortable picking up new technologies.</p>
+        <SkillComponent />
+      </section>
+      <section aria-label='My working experiences'>
+        <h2>Experiences<span className='dot'>.</span></h2>
         <div className='across-line'></div>
+        <ul>
+          {experiences.map((experience) => <JobListItem job={experience} includeAll={true} />)}
+        </ul>
+      </section>
+      <div className='across-line'></div>
     </main>
   );
 };

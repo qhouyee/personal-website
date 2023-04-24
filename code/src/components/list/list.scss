@@ -1,25 +1,23 @@
-.job-item {
+.job-timeline {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
   position: relative;
-  padding: 0 2rem 1rem;
+  padding: 0 0 1rem 2rem;
   margin-left: 4rem;
-  border-left: 3px double #F7986C;
 
   &:before {
     content: '';
     position: relative;
-    left: -45px;
     top: 25px;
+    left: -45px;
     width: 15px;
     height: 15px;
     background: #EEE2DC;
     border: 4px solid #F26C6C;
     box-shadow: 0 0 1rem #F26C6C;
     border-radius: 50%;
-    transition: all 500ms ease-in-out;
   }
 
   &:first-child::before {
@@ -27,18 +25,30 @@
     border: 4px solid #F26C6C;
     box-shadow: 0 0 1.2rem 0.1rem #F26C6C;
   }
+}
 
-  p {
-    width: 90%;
-    margin: 0;
-    padding: 0;
-    font-size: 0.88rem;
-    line-height: 1.5rem;
+.vertical-timeline {
+  border-left: 3px double #F7986C;
+}
 
-    >div:nth-child(odd) {
-      background: #EED5CA;
+.winding-timeline {
+  border-bottom: 2px dotted #F7986C;
+
+  &:nth-child(odd) {
+    border-left: 2px dotted #F7986C;
+  }
+
+  &:nth-child(even) {
+    border-right: 2px dotted #F7986C;
+
+    &:before {
+      align-self: flex-end;
+      left: 13px;
     }
+  }
 
+  &:last-child {
+    border-bottom: none;
   }
 }
 
@@ -55,4 +65,16 @@
 
 .job-date {
   font-size: 0.9rem;
+}
+
+.job-responsibility {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+
+  >div:nth-child(odd) {
+    background: #EED5CA;
+  }
 }
