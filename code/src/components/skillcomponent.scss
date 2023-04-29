@@ -1,3 +1,11 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 40px;
+}
+
 .masonry-with-columns {
   display: flex;
   flex-wrap: wrap;
@@ -56,6 +64,11 @@
 .skill-svg {
   height: 3rem;
   width: 3rem;
+}
+
+.grid-skill-svg {
+  height: 12vh;
+  width: 12vw;
 }
 
 @media screen and (max-width: 1025px) {

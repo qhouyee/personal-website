@@ -1,11 +1,32 @@
-.first-section {
+.content-container {
+    margin: 0 10%;
+}
+
+.image-text-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     height: auto;
-    width: 100%;
+    margin-top: 15vh;
+}
+
+.section-padding {
+    padding-bottom: 6vh;
+}
+
+.header-spacing {
+    margin: 3rem 0 1rem;
+}
+
+.content-bottom-spacing {
+    margin-bottom: 2rem;
+}
+
+
+.alt-background {
+    background: #C1D9E5;
 }
 
 .char-profile {
@@ -16,25 +37,25 @@
     margin-left: auto;
 }
 
+.display-profile {
+    position: relative;
+    left: 1vw;
+    height: auto;
+    width: 20rem;
+}
+
+.across-line {
+    position: relative;
+    top: 0;
+    left: -15%;
+    width: 100vw;
+    border-top: 3px double #F7986C;
+}
+
 .home-text {
     margin-right: 3vw;
 
     >p {
         font-size: 1rem;
     }
-}
-
-.across-line {
-    position: relative;
-    top:0;
-    left: -15%;
-    width: 100vw;
-    border-top: 3px double #F7986C;
-}
-
-.display-profile {
-    position: relative;
-    left: 1vw;
-    height: auto;
-    width: 20rem;
 }

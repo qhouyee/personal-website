@@ -9,8 +9,8 @@ export interface IBackgroundProps { }
 const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   return (
     <main>
-      <section aria-label='My background'>
-        <article className='first-section' aria-label='Page introduction'>
+      <section className='content-container' aria-label='My background'>
+        <article className='image-text-container' aria-label='Page introduction'>
           <div style={{ width: '80%' }}><h1>Background<span className='dot'>.</span></h1>
             <p>Hello there, I’m a self-taught software developer from Singapore, who is currently developing full stack applications at {experiences[0].company}.
               This page provides information about me, including my various internships and jobs.
@@ -36,19 +36,19 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
           </ul>
         </article>
       </section>
-      <section aria-label='My skills'>
+      <section className='content-container' aria-label='My skills'>
         <h2>Skills<span className='dot'>.</span></h2>
         <p>In regards to software technologies, I am familiar with the following stack, but am comfortable picking up new technologies.</p>
-        <SkillComponent />
+        <SkillComponent isComplete={true} />
       </section>
-      <section aria-label='My working experiences'>
+      <section className='content-container' aria-label='My working experiences'>
         <h2>Experiences<span className='dot'>.</span></h2>
         <div className='across-line'></div>
         <ul>
           {experiences.map((experience) => <JobListItem job={experience} includeAll={true} />)}
         </ul>
+        <div className='across-line'></div>
       </section>
-      <div className='across-line'></div>
     </main>
   );
 };
