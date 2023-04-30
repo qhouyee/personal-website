@@ -12,6 +12,12 @@
     margin-top: 15vh;
 }
 
+.svg-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .section-padding {
     padding-bottom: 6vh;
 }
@@ -24,6 +30,14 @@
     margin-bottom: 2rem;
 }
 
+
+.svg-link {
+    fill: #000;
+
+    &:hover {
+        fill: #F26C6C;
+    }
+}
 
 .alt-background {
     background: #C1D9E5;

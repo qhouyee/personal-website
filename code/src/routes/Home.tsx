@@ -5,6 +5,9 @@ import FigureComponent from '../components/figure/FigureComponent';
 import SkillComponent from '../components/SkillComponent';
 import JobListItem from '../components/list/JobListItem';
 import CharProfile from '../assets/png/charprofile.png';
+import { ReactComponent as GithubIcon } from '../assets/svg/github.svg';
+import { ReactComponent as LinkedinIcon } from '../assets/svg/linkedin.svg';
+
 import './routes.scss';
 
 export interface IHomeProps { }
@@ -28,6 +31,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </h1>
           <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </p>
+          <div className='svg-container'>
+            <a title='My Github' href='https://github.com/qhouyee' target='_blank'>
+              <GithubIcon className='svg-link' />
+            </a>
+            <a title='My Linkedin' href='https://sg.linkedin.com/in/hou-yee' target='_blank'>
+              <LinkedinIcon className='svg-link' />
+            </a>
+          </div>
         </aside>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
       </section>
