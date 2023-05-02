@@ -51,6 +51,11 @@
     margin-left: auto;
 }
 
+.error-fig {
+    height: auto;
+    width: calc(200px + 25vw);
+}
+
 .display-profile {
     position: relative;
     left: 1vw;
@@ -113,4 +118,15 @@
     100% {
         transform: translate(0px, 0px) rotate(-45deg)
     }
+}
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

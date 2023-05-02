@@ -17,7 +17,6 @@ nav {
 .home {
   position: relative;
   top: 0.5vh;
-  left: 2vw;
   height: 2.4vw;
   min-height: 20px;
   width: 2.5vw;
@@ -26,8 +25,9 @@ nav {
   padding: 20%;
   border: 5px double #08192c;
   border-radius: 50%;
+  shape-outside: circle();
+  clip-path: circle();
   background-color: transparent;
-  box-shadow: 10px 6px 6px rgba(2, 21, 64, 0.3);
   transition: 0.5s;
 
   &:hover {

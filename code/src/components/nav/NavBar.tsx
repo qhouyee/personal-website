@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
     <>
       <nav>
         <NavLink to="/" end>
-          <HomeLinkIcon className="home" />
+          <HomeLinkIcon style={{ left: '2vw' }} className="home" />
         </NavLink>
         <div className="nav-links">
           <NavLink to="/" end
