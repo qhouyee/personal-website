@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import BackgroundAnimation from './components/animation/BackgroundAnimation';
 import NavBar from './components/nav/NavBar';
 import Home from './routes/Home';
@@ -8,21 +8,31 @@ import Project from './routes/Project';
 
 export interface IAppProps { }
 
-const App: React.FC<IAppProps> = (props: IAppProps) => {
+const router = createBrowserRouter([
+  {
+    element: <NavBar />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      }, {
+        path: "/background",
+        element: <Background />,
+      }, {
+        path: "/project",
+        element: <Project />,
+      },
+    ],
+  },
+]);
 
+const App: React.FC<IAppProps> = (props: IAppProps) => {
   return (
-    <BrowserRouter>
+    <>
       <BackgroundAnimation />
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Home />} />
-          <Route path="/background" element={<Background />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="*" element={<h1>404 - Page not found</h1>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  )
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App
