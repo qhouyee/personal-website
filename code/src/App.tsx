@@ -5,7 +5,6 @@ import NavBar from './components/nav/NavBar';
 import ErrorPage from './components/ErrorPage';
 import Home from './routes/Home';
 import Background from './routes/Background';
-import Project from './routes/Project';
 
 export interface IAppProps { }
 
@@ -19,9 +18,6 @@ const router = createBrowserRouter([
       }, {
         path: "/background",
         element: <Background />,
-      }, {
-        path: "/project",
-        element: <Project />,
       },
     ],
     errorElement: <ErrorPage />,

@@ -17,9 +17,6 @@ const NavBar: React.FC = () => {
           <NavLink to="/background"
             className={({ isActive }) => isActive ? "active" : "pending"}>
             Background</NavLink>
-          <NavLink to="/project"
-            className={({ isActive }) => isActive ? "active" : "pending"}>
-            <span>Project</span></NavLink>
         </div>
       </nav>
       <Outlet />
