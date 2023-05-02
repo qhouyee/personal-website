@@ -1,5 +1,6 @@
 import React from 'react';
 import { experiences } from '../const';
+import Route from './Route';
 import JobListItem from '../components/list/JobListItem';
 import SkillComponent from '../components/SkillComponent';
 import { ReactComponent as SingaporeIcon } from '../assets/svg/sg.svg';
@@ -8,7 +9,7 @@ export interface IBackgroundProps { }
 
 const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   return (
-    <main>
+    <Route>
       <section className='content-container' aria-label='My background'>
         <article className='image-text-container' aria-label='Page introduction'>
           <div style={{ width: '80%' }}><h1>Background<span className='dot'>.</span></h1>
@@ -49,7 +50,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         </ul>
         <div className='across-line'></div>
       </section>
-    </main>
+    </Route>
   );
 };
 

@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { paragraph, experiences } from '../const';
+import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
 import SkillComponent from '../components/SkillComponent';
@@ -8,8 +9,6 @@ import CharProfile from '../assets/png/charprofile.png';
 import { ReactComponent as GithubIcon } from '../assets/svg/github.svg';
 import { ReactComponent as LinkedinIcon } from '../assets/svg/linkedin.svg';
 
-import './routes.scss';
-
 export interface IHomeProps { }
 
 const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
@@ -17,7 +16,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   const [letterClass, setLetterClass] = useState('waviy');
 
   return (
-    <main>
+    <Route>
       <section className='content-container image-text-container section-padding' aria-label='Introduction'>
         <aside className='home-text' aria-label='Introduction content'>
           <h1 style={{ marginTop: '15%' }}>
@@ -57,7 +56,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </ul>
         </article>
       </section>
-    </main>
+    </Route>
   );
 };
 
