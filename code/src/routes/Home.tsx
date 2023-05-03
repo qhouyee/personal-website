@@ -3,7 +3,7 @@ import { paragraph, experiences } from '../const';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
-import SkillComponent from '../components/SkillComponent';
+import SkillComponent from '../components/content/SkillComponent';
 import JobListItem from '../components/list/JobListItem';
 import CharProfile from '../assets/png/charprofile.png';
 import { ReactComponent as GithubIcon } from '../assets/svg/github.svg';

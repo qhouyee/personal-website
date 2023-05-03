@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouteError, NavLink } from "react-router-dom";
-import FigureComponent from './figure/FigureComponent';
-import NotFoundImage from '../assets/png/404.png';
-import { ReactComponent as HomeLinkIcon } from '../assets/svg/homenav.svg';
+import FigureComponent from '../figure/FigureComponent';
+import NotFoundImage from '../../assets/png/404.png';
+import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
 
 
 export interface IErrorPageProps { }

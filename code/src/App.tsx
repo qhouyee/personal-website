@@ -2,7 +2,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import BackgroundAnimation from './components/animation/BackgroundAnimation';
 import NavBar from './components/nav/NavBar';
-import ErrorPage from './components/ErrorPage';
+import ErrorPage from './components/error/ErrorPage';
 import Home from './routes/Home';
 import Background from './routes/Background';
 

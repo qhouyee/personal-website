@@ -2,7 +2,7 @@ import React from 'react';
 import { experiences } from '../const';
 import Route from './Route';
 import JobListItem from '../components/list/JobListItem';
-import SkillComponent from '../components/SkillComponent';
+import SkillComponent from '../components/content/SkillComponent';
 import { ReactComponent as SingaporeIcon } from '../assets/svg/sg.svg';
 
 export interface IBackgroundProps { }
