@@ -4,6 +4,7 @@ import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
 import SkillComponent from '../components/content/SkillComponent';
+import ProjectSection from '../components/content/ProjectSection';
 import JobListItem from '../components/list/JobListItem';
 import CharProfile from '../assets/png/charprofile.png';
 import { ReactComponent as GithubIcon } from '../assets/svg/github.svg';
@@ -48,13 +49,17 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           <p></p>
         </article>
       </section>
-      <section aria-label='My journey'>
+      <section className='section-padding' aria-label='My journey'>
         <article className='content-container'>
           <h2 className='header-spacing' >My Journey<span className='dot'>.</span></h2>
           <ul style={{ borderTop: '2px solid rgb(247,152,108, 0.7)', borderBottom: '2px solid rgb(247,152,108, 0.7)' }}>
             {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
           </ul>
         </article>
+      </section>
+      <section className='content-container section-padding' aria-label='My journey'>
+        <h2>Projects<span className='dot'>.</span></h2>
+        <ProjectSection />
       </section>
     </Route>
   );

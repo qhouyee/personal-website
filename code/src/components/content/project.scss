@@ -1,0 +1,89 @@
+.project-layout {
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem 0 4rem;
+
+  >div {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .project-text {
+    margin: 1.5rem 0.5rem 0.5rem 1.4rem;
+    white-space: pre-line;
+  }
+
+  .figure-overlay {
+    position: relative;
+    width: auto;
+    height: auto;
+
+    &::after {
+      content: attr(proj-title);
+      position: absolute;
+      top: -2rem;
+      left: 1rem;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    &:hover {
+      .project-figure {
+        -webkit-filter: grayscale(.3);
+        filter: grayscale(.3);
+        transition: filter 0.5s ease-in;
+      }
+    }
+  }
+
+  .project-figure {
+    height: auto;
+    width: 45vw;
+    border: 2px solid #EEE2DC;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    -webkit-filter: grayscale(.8) hue-rotate(3.142rad);
+    filter: grayscale(.8) hue-rotate(3.142rad);
+    transition: filter 0.5s ease-out;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .figure-overlay::after {
+      left: auto;
+      right: 1rem;
+    }
+
+    .project-text {
+      margin-right: 1.4rem;
+      margin-left: 0;
+    }
+  }
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: space-evenly;
+
+  .tech-svg {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-layout {
+    flex-direction: column !important;
+
+    .project-figure {
+      height: auto;
+      width: 100%;
+    }
+
+    .project-text {
+      margin: 1rem 0;
+    }
+  }
+}
