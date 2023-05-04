@@ -23,13 +23,33 @@
 }
 
 .header-spacing {
-    margin: 3rem 0 1rem;
+    margin: 1.5rem 0 1rem;
 }
 
 .content-bottom-spacing {
     margin-bottom: 2rem;
 }
 
+.side-title {
+    position: relative;
+    top: 160px;
+    left: 8%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    writing-mode: vertical-lr;
+}
+
+.timeline-edges::after,
+.timeline-edges::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    box-sizing: border-box;
+    border-width: 0.4rem;
+    border-color: rgb(247, 152, 108, 0.7) transparent;
+    border-style: double;
+}
 
 .svg-link {
     fill: #000;

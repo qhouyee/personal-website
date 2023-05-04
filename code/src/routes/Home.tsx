@@ -42,19 +42,19 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         </aside>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
       </section>
+      <section className='section-padding' aria-label='My journey'>
+        <article className='content-container'>
+          <p className='side-title'>my journey</p>
+          <ul className='timeline-edges'>
+            {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
+          </ul>
+        </article>
+      </section>
       <section className='alt-background' aria-label='My skills'>
         <article className='content-container'>
           <h2 className='header-spacing'>Programming Skills<span className='dot'>.</span></h2>
           <SkillComponent isComplete={false} />
           <p></p>
-        </article>
-      </section>
-      <section className='section-padding' aria-label='My journey'>
-        <article className='content-container'>
-          <h2 className='header-spacing' >My Journey<span className='dot'>.</span></h2>
-          <ul style={{ borderTop: '2px solid rgb(247,152,108, 0.7)', borderBottom: '2px solid rgb(247,152,108, 0.7)' }}>
-            {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
-          </ul>
         </article>
       </section>
       <section className='content-container section-padding' aria-label='My journey'>
