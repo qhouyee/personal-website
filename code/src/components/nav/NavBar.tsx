@@ -6,6 +6,9 @@ import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
 const NavBar: React.FC = () => {
   return (
     <>
+      <div className='contact'>
+        <a href="mailto:quekhouyee@gmail.com">email</a>
+      </div>
       <nav>
         <NavLink to="/" end>
           <HomeLinkIcon style={{ left: '2vw' }} className="home" />

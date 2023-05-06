@@ -165,3 +165,29 @@ nav {
     }
   }
 }
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 3rem;
+  width: 40px;
+  writing-mode: vertical-lr;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 10vh;
+    margin: 2vh auto 0;
+    background-color: #F26C6C;
+  }
+
+  >a:hover {
+    color: #1F1F1F;
+    text-decoration: none;
+  }
+}
