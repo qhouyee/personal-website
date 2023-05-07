@@ -13,9 +13,9 @@ const ProjectSection: React.FC<IProjectProps> = (props: IProjectProps) => {
   return (
     <>
       <ProjectComponent projectName='1. PORTFOLIO' projectDescription='- Designed and developed a portfolio site to experiment with front end technologies and showcase my skills.'
-        projectFigureUrl={Portfolio} projectTech={portfolioTechStack} />
+        projectUrl='https://github.com/qhouyee/personal-website' projectFigureUrl={Portfolio} projectTech={portfolioTechStack} />
       <ProjectComponent projectName='2. CYCLING CULTURE IN XIAMEN' projectDescription={'- Conducted a geospatial analysis of the cycling infrastructure in Xiamen for a university module. \n - Experiment with ArcGIS geospatial web visualization capabilities.'}
-        projectFigureUrl={CyclingAnalysis} projectTech={cyclingTechStack} />
+        projectUrl='/webgis' projectFigureUrl={CyclingAnalysis} projectTech={cyclingTechStack} />
     </>
   );
 }
