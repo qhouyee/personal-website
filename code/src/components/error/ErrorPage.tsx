@@ -12,7 +12,7 @@ const ErrorPage: React.FC<IErrorPageProps> = (props: IErrorPageProps) => {
   if (error.status === 404) {
 
     return (
-      <div id="error-page">
+      <div id="center-page-container">
         <FigureComponent url={NotFoundImage} alt={'404 illustration'} cssClass="error-fig" />
         <p>
           <span>Oops, it seems like you wandered too far to a non-existent page...</span>

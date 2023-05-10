@@ -5,6 +5,7 @@ import NavBar from './components/nav/NavBar';
 import ErrorPage from './components/error/ErrorPage';
 import Home from './routes/Home';
 import Background from './routes/Background';
+import Webgis from './routes/Webgis';
 
 export interface IAppProps { }
 
@@ -19,8 +20,13 @@ const router = createBrowserRouter([
         path: "/background",
         element: <Background />,
       },
+      
     ],
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/webgis",
+    element: <Webgis />,
   },
 ]);
 
