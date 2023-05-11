@@ -1,5 +1,7 @@
 import { React, useState } from 'react';
+import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
+import { simpleVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -20,15 +22,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
     <Route>
       <section className='content-container image-text-container section-padding' aria-label='Introduction'>
         <aside className='home-text' aria-label='Introduction content'>
-          <h1 style={{ marginTop: '15%' }}>
+          <motion.h1 initial='hidden' whileInView='visible' variants={simpleVariants(true)} style={{ marginTop: '15%' }}>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
-              idx={1}
             />
             <br />
             <span style={{ fontSize: '2.5rem' }}><b>Hyde</b> here!</span>
-          </h1>
+          </motion.h1>
           <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </p>
           <div className='svg-container'>

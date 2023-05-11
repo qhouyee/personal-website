@@ -1,35 +1,5 @@
 .waviy {
-  position: relative;
   display: inline-block;
   color: #dc7027;
-  animation: waviy 1.4s;
   font-size: 4rem;
-}
-
-@for $i from 1 through 6 {
-  .waviy_#{$i} {
-    animation-delay: #{0.15 * $i}s;
-  }
-}
-
-.waviy_1:first-child {
-  animation: waviy_1 1.4s;
-}
-
-@keyframes waviy {
-  0%, 40%, 100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-15px)
-  }
-}
-
-@keyframes waviy_1 {
-  0%, 40%, 100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-25px)
-  }
 }
