@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
-import { simpleVariants } from '../variant/variants';
+import { simpleVariants, paragraphVariants, iconVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -21,26 +21,29 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   return (
     <Route>
       <section className='content-container image-text-container section-padding' aria-label='Introduction'>
-        <aside className='home-text' aria-label='Introduction content'>
-          <motion.h1 initial='hidden' whileInView='visible' variants={simpleVariants(true)} style={{ marginTop: '15%' }}>
+        <motion.aside initial='hidden' whileInView='visible' variants={simpleVariants(true)}
+          className='home-text' aria-label='Introduction content'>
+          <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
             />
             <br />
-            <span style={{ fontSize: '2.5rem' }}><b>Hyde</b> here!</span>
-          </motion.h1>
-          <p dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
-          </p>
-          <div className='svg-container'>
-            <a title='My Github' href='https://github.com/qhouyee' target='_blank'>
+            <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1.6)} style={{ fontSize: '2.5rem' }}>
+              <b>Hyde</b> here!
+            </motion.p>
+          </h1>
+          <motion.p variants={paragraphVariants(2.2)} dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
+          </motion.p>
+          <motion.div variants={simpleVariants(true, 2)} className='svg-container'>
+            <motion.a variants={iconVariants} title='My Github' href='https://github.com/qhouyee' target='_blank'>
               <GithubIcon className='svg-link' />
-            </a>
-            <a title='My Linkedin' href='https://sg.linkedin.com/in/hou-yee' target='_blank'>
+            </motion.a>
+            <motion.a variants={iconVariants} title='My Linkedin' href='https://sg.linkedin.com/in/hou-yee' target='_blank'>
               <LinkedinIcon className='svg-link' />
-            </a>
-          </div>
-        </aside>
+            </motion.a>
+          </motion.div>
+        </motion.aside>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
       </section>
       <section className='section-padding' aria-label='My journey'>
