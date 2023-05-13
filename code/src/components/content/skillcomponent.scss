@@ -29,18 +29,6 @@
     }
   }
 
-  &:hover {
-
-    div:hover,
-    div:focus {
-      transform: rotate(-5deg) translate(-0.5em, -0.5em);
-    }
-
-    >.blur:not(:hover) {
-      filter: blur(2px);
-    }
-  }
-
   @for $i from 1 through 10 {
     div:nth-child(#{$i}) {
       $h: (random(1000)/500+8)+rem;

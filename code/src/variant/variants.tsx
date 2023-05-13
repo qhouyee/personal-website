@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion";
+import { Variants, cubicBezier } from "framer-motion";
 
 export const simpleVariants: Variants = (shouldStagger: boolean, delay: number = 0) => ({
   hidden: {
@@ -93,4 +93,24 @@ export const lineVariants: Variants = (delay: number) => ({
       delay: delay,
     }
   },
+});
+
+export const skillCardVariants: Variants = (delay: number) => ({
+  hidden: {
+    x: -200,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      ease: "easeIn",
+      delay: delay,
+    }
+  },
+  hover: {
+    scale: 1.2,
+    rotate: Math.random() * (10 + 10) - 10,
+    zIndex: 100,
+  }
 });
