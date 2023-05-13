@@ -38,11 +38,13 @@ nav {
 }
 
 .nav-links {
+  display:flex;
+  flex-direction: row;
   justify-content: right;
   position: relative;
   right: 4vw;
 
-  >a {
+  >div>a {
     color: #343434;
 
     &:hover {
@@ -50,7 +52,7 @@ nav {
     }
   }
 
-  >.active {
+  >div>.active {
     position: relative;
     height: 5vh;
     min-height: 20px;

@@ -34,11 +34,11 @@ export const paragraphVariants: Variants = (delay: number) => ({
 export const bounceLetterVariants: Variants = {
   hidden: {
     y: 0,
-    opacity:0
+    opacity: 0
   },
   visible: {
     y: [60, 10, -100, 0],
-    opacity:1,
+    opacity: 1,
     transition: {
       type: "spring",
       damping: 5,
@@ -74,8 +74,23 @@ export const imageVariants: Variants = (delay: number) => ({
     scale: 1,
     opacity: 1,
     transition: {
-      duration:2,
+      duration: 2,
       delay: delay
+    }
+  },
+});
+
+export const lineVariants: Variants = (delay: number) => ({
+  hidden: {
+    clipPath: `inset(100% 0 0 0)`,
+    opacity: 0,
+  },
+  visible: {
+    clipPath: `inset(0 0 0 0)`,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: delay,
     }
   },
 });
