@@ -1,14 +1,17 @@
 import React from 'react';
+import { motion, Variants } from "framer-motion";
 
 export interface IFigureComponentProps {
   url: string | undefined;
   alt: string;
   cssClass?: string;
+  motionVariant: Variants;
 }
 
-const FigureComponent: React.FC<IFigureComponentProps> = ({ url, alt, cssClass }: IFigureComponentProps) => {
+const FigureComponent: React.FC<IFigureComponentProps> = ({ url, alt, cssClass, motionVariant }: IFigureComponentProps) => {
   return (
-    <img src={url} alt={alt} className = {cssClass} />
+    <motion.img initial='hidden' whileInView='visible' variants={motionVariant}
+      src={url} alt={alt} className={cssClass} />
   );
 };
 

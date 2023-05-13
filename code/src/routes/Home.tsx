@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
-import { simpleVariants, paragraphVariants, iconVariants } from '../variant/variants';
+import { simpleVariants, paragraphVariants, iconVariants, imageVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -35,7 +35,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </h1>
           <motion.p variants={paragraphVariants(2.2)} dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </motion.p>
-          <motion.div variants={simpleVariants(true, 2)} className='svg-container'>
+          <motion.div variants={simpleVariants(true, 3.5)} className='svg-container'>
             <motion.a variants={iconVariants} title='My Github' href='https://github.com/qhouyee' target='_blank'>
               <GithubIcon className='svg-link' />
             </motion.a>
@@ -44,7 +44,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
             </motion.a>
           </motion.div>
         </motion.aside>
-        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" />
+        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
       <section className='section-padding' aria-label='My journey'>
         <article className='content-container'>

@@ -34,9 +34,11 @@ export const paragraphVariants: Variants = (delay: number) => ({
 export const bounceLetterVariants: Variants = {
   hidden: {
     y: 0,
+    opacity:0
   },
   visible: {
     y: [60, 10, -100, 0],
+    opacity:1,
     transition: {
       type: "spring",
       damping: 5,
@@ -60,3 +62,20 @@ export const iconVariants: Variants = {
     }
   },
 };
+
+export const imageVariants: Variants = (delay: number) => ({
+  hidden: {
+    x: 100,
+    scale: 0.9,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration:2,
+      delay: delay
+    }
+  },
+});
