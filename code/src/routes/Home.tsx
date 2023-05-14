@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
-import { simpleVariants, paragraphVariants, iconVariants, imageVariants } from '../variant/variants';
+import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -25,8 +25,9 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           className='home-text' aria-label='Introduction content'>
           <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
-              letterClass={letterClass}
               strArray={nameArray}
+              variants={bounceLetterVariants}
+              letterClass={letterClass}
             />
             <br />
             <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1.6)} style={{ fontSize: '2.5rem' }}>

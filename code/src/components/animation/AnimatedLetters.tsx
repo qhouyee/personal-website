@@ -1,21 +1,22 @@
 import React from 'react';
-import { motion } from "framer-motion";
-import { bounceLetterVariants } from '../../variant/variants';
+import { motion, Variants } from "framer-motion";
 import './animation.scss';
 
 export interface IAnimatedLettersProps {
   strArray: string[];
-  letterClass: string;
+  variants: Variants;
+  letterClass?: string;
 }
 
-const AnimatedLetters: React.FC<IAnimatedLettersProps> = ({ strArray, letterClass }: IAnimatedLettersProps) => {
+const AnimatedLetters: React.FC<IAnimatedLettersProps> = ({ strArray, variants, letterClass }: IAnimatedLettersProps) => {
   return (
     <>
       {strArray.map((char, i) => (
-          <motion.div variants={bounceLetterVariants} key={char + i} className= {letterClass}>
-            {char}
-          </motion.div>
-        ))}
+        <motion.div variants={variants} key={char + i} className={letterClass} style={{ display: "inline-block" }
+        }>
+          {char}
+        </motion.div>
+      ))}
     </>
   );
 };

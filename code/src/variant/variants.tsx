@@ -14,6 +14,23 @@ export const simpleVariants: Variants = (shouldStagger: boolean, delay: number =
   }
 });
 
+export const titleVariants: Variants = {
+  hidden: {
+    x: 10,
+    y: 10,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: 'easeInOut',
+      duration: .1,
+    }
+  },
+};
+
 export const paragraphVariants: Variants = (delay: number) => ({
   hidden: {
     y: -20,
@@ -26,7 +43,7 @@ export const paragraphVariants: Variants = (delay: number) => ({
       type: "spring",
       damping: 9,
       stiffness: 100,
-      delay: delay,
+      ...(delay !== 0 && { delay }),
     }
   },
 });
@@ -75,7 +92,7 @@ export const imageVariants: Variants = (delay: number) => ({
     opacity: 1,
     transition: {
       duration: 2,
-      delay: delay
+      ...(delay !== 0 && { delay }),
     }
   },
 });
