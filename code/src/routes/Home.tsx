@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
 import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
@@ -17,6 +17,7 @@ export interface IHomeProps { }
 const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   const nameArray = ['H', 'e', 'l', 'l', 'o'];
   const [letterClass, setLetterClass] = useState('waviy');
+  let ref = useRef<HTMLDivElement>(null);
 
   return (
     <Route>
@@ -47,12 +48,12 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         </motion.aside>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
-      <section className='section-padding' aria-label='My journey'>
+      <section ref={ref} className='section-padding' aria-label='My journey'>
         <article className='content-container'>
           <p className='side-title'>my journey</p>
-          <ul className='timeline-edges'>
+          <motion.ul drag="x" dragConstraints={ref} className='drag-container timeline-edges'>
             {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
-          </ul>
+          </motion.ul>
         </article>
       </section>
       <section className='alt-background' aria-label='My skills'>

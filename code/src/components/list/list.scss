@@ -1,81 +1,60 @@
-.job-timeline {
+.job-card {
+  height: 25rem;
+  width: 350px;
+  margin: 2rem;
+  background: #EDC7B7;
+  box-shadow: 0px 0px 11px 1px rgba(31, 31, 31, 0.3);
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(31, 31, 31, 0.3);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(31, 31, 31, 0.3);
+  font-size: 0.8rem;
+}
+
+.job-header {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  position: relative;
-  left:10%;
-  width: 50vw;
-  padding: 0 0 1rem 2rem;
-
-  &:before {
-    content: '';
-    position: relative;
-    top: 25px;
-    left: -45px;
-    width: 15px;
-    height: 15px;
-    background: #EEE2DC;
-    border: 4px solid #F26C6C;
-    box-shadow: 0 0 1rem #F26C6C;
-    border-radius: 50%;
-  }
-
-  &:first-child::before {
-    background: white;
-    border: 4px solid #F26C6C;
-    box-shadow: 0 0 1.2rem 0.1rem #F26C6C;
-  }
-}
-
-.vertical-timeline {
-  border-left: 3px double #F7986C;
-}
-
-.winding-timeline {
-  border-bottom: 2px dotted #F7986C;
-
-  &:nth-child(odd) {
-    border-left: 2px dotted #F7986C;
-  }
-
-  &:nth-child(even) {
-    border-right: 2px dotted #F7986C;
-
-    &:before {
-      align-self: flex-end;
-      left: 13px;
-    }
-  }
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
-.job-title {
-  position: relative;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: underline;
+  justify-content: flex-end;
+  height: 15%;
+  padding: 5% 5% 5% 10%;
+  background-color: #F26C6C;
 }
 
 .job-company {
-  font-size: 1rem;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-.job-date {
+.job-description {
+  height: 55%;
+  width: 90%;
+  margin: 5% 5%;
+  background-color: #EEE2DC;
+  border-color: #EDC7B7;
+  border-radius: 5px;
+}
+
+.job-title {
+  font-weight: 600;
   font-size: 0.9rem;
+  padding: 3% 5% 1%;
 }
 
 .job-responsibility {
-  width: 90%;
-  margin: 0;
-  padding: 0;
-  font-size: 0.88rem;
-  line-height: 1.5rem;
+  padding: 0 5%;
+}
 
-  >div:nth-child(odd) {
-    background: #EED5CA;
+.job-duration {
+  position: relative;
+  text-align: right;
+  padding: 1rem 5% 0 0;
+
+  &::before {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 350px;
+    background: rgba(31, 31, 31, 0.2);
+    transform: translateY(-1vh);
   }
 }

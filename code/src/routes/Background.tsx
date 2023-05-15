@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import { motion } from "framer-motion";
 import { simpleVariants, titleVariants, paragraphVariants, imageVariants } from '../variant/variants';
 import { experiences } from '../const';
@@ -12,6 +12,8 @@ export interface IBackgroundProps { }
 
 const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   const titleArray: string[] = ['B', 'a', 'c', 'k', 'g', 'r', 'o', 'u', 'n', 'd'];
+  let ref = useRef<HTMLDivElement>(null);
+  
   return (
     <Route>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 1.5)} className='content-container' aria-label='My background'>
@@ -56,12 +58,12 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         </motion.p>
         <SkillComponent isComplete={true} />
       </motion.section>
-      <section className='content-container' aria-label='My working experiences'>
+      <section ref={ref} className='content-container' aria-label='My working experiences'>
         <h2>Experiences<span className='dot'>.</span></h2>
         <div className='across-line'></div>
-        <ul>
-          {experiences.map((experience) => <JobListItem job={experience} includeAll={true} />)}
-        </ul>
+        <motion.ul drag="x" dragConstraints={ref} className = "drag-container">
+          {experiences.map((experience) => <JobListItem job={experience}/>)}
+        </motion.ul>
         <div className='across-line'></div>
       </section>
     </Route>

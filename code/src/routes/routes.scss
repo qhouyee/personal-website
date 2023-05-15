@@ -13,6 +13,14 @@
     margin: 0 10%;
 }
 
+.drag-container {
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    left: 20vw;
+    width: max-content;
+}
+
 .image-text-container {
     display: flex;
     flex-direction: row;
