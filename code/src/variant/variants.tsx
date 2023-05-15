@@ -131,3 +131,20 @@ export const skillCardVariants: Variants = (delay: number) => ({
     zIndex: 100,
   }
 });
+
+export const jobCardVariants: Variants = {
+  hidden: {
+    scale: 0.8,
+    opacity: 0.6,
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 11,
+      stiffness: 50,
+      duration: 2,
+    }
+  },
+};

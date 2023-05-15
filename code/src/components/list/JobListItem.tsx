@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from "framer-motion";
+import { jobCardVariants } from '../../variant/variants';
 import { Job } from '../../const';
 import './list.scss';
 
@@ -8,9 +10,8 @@ export interface IJobListItemProps {
 
 
 const JobListItem: React.FC<IJobListItemProps> = ({ job }: IJobListItemProps) => {
-
   return (
-    <li >
+    <motion.li initial='hidden' whileInView='visible' viewport={{ margin: "0px -40%" }} variants={jobCardVariants}>
       <div className="job-card">
         <div className="job-header">
           <div className="job-company">{job.company}</div>
@@ -25,7 +26,7 @@ const JobListItem: React.FC<IJobListItemProps> = ({ job }: IJobListItemProps) =>
           {job.start} - {job.end}
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 }
 
