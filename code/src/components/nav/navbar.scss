@@ -177,6 +177,7 @@ nav {
   left: auto;
   right: 3rem;
   width: 40px;
+  z-index: 1000;
   writing-mode: vertical-lr;
 
   &::after {
