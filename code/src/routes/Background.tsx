@@ -1,6 +1,6 @@
 import { React, useRef } from 'react';
 import { motion } from "framer-motion";
-import { simpleVariants, titleVariants, paragraphVariants, imageVariants } from '../variant/variants';
+import { simpleVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants } from '../variant/variants';
 import { experiences } from '../const';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
@@ -52,7 +52,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         </article>
       </motion.section>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 3.5)} className='content-container' aria-label='My skills'>
-        <motion.h2 variants={paragraphVariants(0)}>Skills<span className='dot'>.</span></motion.h2>
+        <motion.h2 variants={subTitleVariants}>Skills<span className='dot'>.</span></motion.h2>
         <motion.p variants={paragraphVariants(0)}>
           In regards to software technologies, I am familiar with the following stack, but am comfortable picking up new technologies.
         </motion.p>
@@ -60,7 +60,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
       </motion.section>
       <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)}
         className='content-container' aria-label='My working experiences'>
-        <h2>Experiences<span className='dot'>.</span></h2>
+        <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
         <div className='across-line screen-line alt-background'>
           <motion.ul drag="x" dragConstraints={ref} className="drag-container ">
             {experiences.map((experience) => <JobListItem job={experience} />)}

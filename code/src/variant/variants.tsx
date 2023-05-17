@@ -31,6 +31,23 @@ export const titleVariants: Variants = {
   },
 };
 
+export const subTitleVariants: Variants = {
+  hidden: {
+    y: -20,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 4,
+      stiffness: 100,
+      duration: 2,
+    }
+  },
+};
+
 export const paragraphVariants: Variants = (delay: number) => ({
   hidden: {
     y: -20,

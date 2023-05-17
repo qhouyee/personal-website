@@ -1,7 +1,7 @@
 import { React, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
-import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
+import { simpleVariants, subTitleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -58,17 +58,17 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </div>
         </article>
       </section>
-      <section aria-label='My skills'>
+      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} aria-label='My skills'>
         <article className='content-container'>
-          <h2 className='header-spacing'>Programming Skills<span className='dot'>.</span></h2>
+          <motion.h2 variants={subTitleVariants} className='header-spacing'>Programming Skills<span className='dot'>.</span></motion.h2>
           <SkillComponent isComplete={false} />
-          <p></p>
         </article>
-      </section>
-      <section className='content-container section-padding' aria-label='My journey'>
-        <h2>Projects<span className='dot'>.</span></h2>
+      </motion.section>
+      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)}
+        className='content-container section-padding' aria-label='My journey'>
+        <motion.h2 variants={subTitleVariants}>Projects<span className='dot'>.</span></motion.h2>
         <ProjectSection />
-      </section>
+      </motion.section>
     </Route>
   );
 };
