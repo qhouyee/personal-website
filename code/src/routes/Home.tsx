@@ -48,15 +48,17 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         </motion.aside>
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
-      <section ref={ref} className='section-padding' aria-label='My journey'>
-        <article className='content-container'>
-          <p className='side-title'>my journey</p>
-          <motion.ul drag="x" dragConstraints={ref} className='drag-container timeline-edges'>
-            {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
-          </motion.ul>
+      <section ref={ref} className='section-padding ' aria-label='My journey'>
+        <article className='content-container' >
+          <div className='timeline-edges screen-line alt-background'>
+            <motion.ul drag="x" dragConstraints={ref} className='drag-container '>
+              <p className='side-title '>my journey</p>
+              {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
+            </motion.ul>
+          </div>
         </article>
       </section>
-      <section className='alt-background' aria-label='My skills'>
+      <section aria-label='My skills'>
         <article className='content-container'>
           <h2 className='header-spacing'>Programming Skills<span className='dot'>.</span></h2>
           <SkillComponent isComplete={false} />

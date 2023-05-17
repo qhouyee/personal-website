@@ -13,7 +13,7 @@ export interface IBackgroundProps { }
 const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   const titleArray: string[] = ['B', 'a', 'c', 'k', 'g', 'r', 'o', 'u', 'n', 'd'];
   let ref = useRef<HTMLDivElement>(null);
-  
+
   return (
     <Route>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 1.5)} className='content-container' aria-label='My background'>
@@ -58,14 +58,15 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         </motion.p>
         <SkillComponent isComplete={true} />
       </motion.section>
-      <section ref={ref} className='content-container' aria-label='My working experiences'>
+      <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)}
+        className='content-container' aria-label='My working experiences'>
         <h2>Experiences<span className='dot'>.</span></h2>
-        <div className='across-line'></div>
-        <motion.ul drag="x" dragConstraints={ref} className = "drag-container">
-          {experiences.map((experience) => <JobListItem job={experience}/>)}
-        </motion.ul>
-        <div className='across-line'></div>
-      </section>
+        <div className='across-line screen-line alt-background'>
+          <motion.ul drag="x" dragConstraints={ref} className="drag-container ">
+            {experiences.map((experience) => <JobListItem job={experience} />)}
+          </motion.ul>
+        </div>
+      </motion.section>
     </Route>
   );
 };
