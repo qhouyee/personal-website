@@ -29,7 +29,8 @@ const ProjectComponent: React.FC<IProjectComponentProps> = ({ projectName, proje
   let target:string = projectUrl.startsWith('http') ? '_blank' : '_self';
   return (
     <article className='project-layout'>
-      <div className='figure-overlay' proj-title={projectName}>
+      <div className='figure-overlay'>
+        <h3 className='project-title'>{projectName}</h3>
         <NavLink title='project link' to={projectUrl} target={target} className='project-link'>Find out more &#8658;</NavLink>
         <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' />
       </div>
