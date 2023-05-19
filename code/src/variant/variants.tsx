@@ -14,6 +14,20 @@ export const simpleVariants: Variants = (shouldStagger: boolean, delay: number =
   }
 });
 
+export const swipeRightVariants: Variants = {
+  hidden: {
+    clipPath: `inset(0 100% 0 0)`,
+    opacity: 0,
+  },
+  visible: {
+    clipPath: `inset(0 0 0 0)`,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    }
+  },
+};
+
 export const titleVariants: Variants = {
   hidden: {
     x: 10,
@@ -124,7 +138,7 @@ export const lineVariants: Variants = (delay: number) => ({
     opacity: 1,
     transition: {
       duration: 0.5,
-      delay: delay,
+      ...(delay !== 0 && { delay }),
     }
   },
 });

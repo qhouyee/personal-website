@@ -1,7 +1,7 @@
 import { React, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import { paragraph, experiences } from '../const';
-import { simpleVariants, subTitleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
+import { simpleVariants, swipeRightVariants, subTitleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../variant/variants';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import FigureComponent from '../components/figure/FigureComponent';
@@ -49,14 +49,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
       <section ref={ref} className='section-padding ' aria-label='My journey'>
-        <article className='content-container' >
-          <div className='timeline-edges screen-line alt-background'>
+        <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} className='content-container' >
+          <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>
             <motion.ul drag="x" dragConstraints={ref} className='drag-container '>
               <p className='side-title '>my journey</p>
               {experiences.map((experience) => <JobListItem job={experience} includeAll={false} />)}
             </motion.ul>
-          </div>
-        </article>
+          </motion.div>
+        </motion.article>
       </section>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} aria-label='My skills'>
         <article className='content-container'>

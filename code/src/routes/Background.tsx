@@ -1,6 +1,6 @@
 import { React, useRef } from 'react';
 import { motion } from "framer-motion";
-import { simpleVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants } from '../variant/variants';
+import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants } from '../variant/variants';
 import { experiences } from '../const';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
@@ -61,11 +61,11 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
       <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)}
         className='content-container' aria-label='My working experiences'>
         <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
-        <div className='across-line screen-line alt-background'>
+        <motion.div variants={swipeRightVariants} className='across-line screen-line alt-background'>
           <motion.ul drag="x" dragConstraints={ref} className="drag-container ">
             {experiences.map((experience) => <JobListItem job={experience} />)}
           </motion.ul>
-        </div>
+        </motion.div>
       </motion.section>
     </Route>
   );
