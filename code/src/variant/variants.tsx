@@ -1,6 +1,6 @@
-import { Variants, cubicBezier } from "framer-motion";
+import { Variants } from "framer-motion";
 
-export const simpleVariants: Variants = (shouldStagger: boolean, delay: number = 0) => ({
+export const simpleVariants: Variants = (shouldStagger: boolean, delay: number = 0, delayChildren: number = delay) => ({
   hidden: {
     opacity: 0
   },
@@ -9,7 +9,7 @@ export const simpleVariants: Variants = (shouldStagger: boolean, delay: number =
     transition: {
       staggerChildren: shouldStagger ? 0.15 : 0,
       delay: delay,
-      delayChildren: delay,
+      delayChildren: delayChildren,
     }
   }
 });

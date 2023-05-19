@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import { paragraphVariants, iconVariants, imageVariants } from '../../variant/variants';
 import FigureComponent from '../figure/FigureComponent';
 import { ReactComponent as CssIcon } from '../../assets/svg/software/css.svg';
 import { ReactComponent as HtmlIcon } from '../../assets/svg/software/html.svg';
@@ -26,27 +28,27 @@ let techIconMap: { [tech: string]: React.FunctionComponent<React.SVGProps<SVGSVG
 };
 
 const ProjectComponent: React.FC<IProjectComponentProps> = ({ projectName, projectDescription, projectUrl, projectFigureUrl, projectTech }: IProjectComponentProps) => {
-  let target:string = projectUrl.startsWith('http') ? '_blank' : '_self';
+  let target: string = projectUrl.startsWith('http') ? '_blank' : '_self';
   return (
-    <article className='project-layout'>
+    <motion.article initial='hidden' whileInView='visible' className='project-layout' >
       <div className='figure-overlay'>
-        <h3 className='project-title'>{projectName}</h3>
+        <motion.h3 variants={paragraphVariants(0)} className='project-title'>{projectName}</motion.h3>
         <NavLink title='project link' to={projectUrl} target={target} className='project-link'>Find out more &#8658;</NavLink>
-        <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' />
+        <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' motionVariant={imageVariants(0)} />
       </div>
       <div>
-        <span className='project-text'>
-          <h3>Description</h3>
-          <p>{projectDescription}</p>
-          <div className='tech-icons'>
+        <motion.span initial='hidden' whileInView='visible' className='project-text'>
+          <motion.h3 variants={paragraphVariants(0)}>Description</motion.h3>
+          <motion.p variants={paragraphVariants(0)}>{projectDescription}</motion.p>
+          <motion.div variants={iconVariants} className='tech-icons'>
             {projectTech.map(tech => {
               let Icon = techIconMap[tech];
               return Icon ? <Icon key={tech} title={tech} className='tech-svg' /> : null;
             })}
-          </div>
-        </span>
+          </motion.div>
+        </motion.span>
       </div>
-    </article>
+    </motion.article>
   );
 }
 

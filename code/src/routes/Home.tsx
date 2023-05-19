@@ -64,9 +64,8 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           <SkillComponent isComplete={false} />
         </article>
       </motion.section>
-      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)}
-        className='content-container section-padding' aria-label='My journey'>
-        <motion.h2 variants={subTitleVariants}>Projects<span className='dot'>.</span></motion.h2>
+      <motion.section className='content-container section-padding' aria-label='My journey'>
+        <motion.h2 initial='hidden' whileInView='visible' variants={subTitleVariants}>Projects<span className='dot'>.</span></motion.h2>
         <ProjectSection />
       </motion.section>
     </Route>
