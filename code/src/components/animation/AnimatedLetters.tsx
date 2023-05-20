@@ -12,8 +12,9 @@ const AnimatedLetters: React.FC<IAnimatedLettersProps> = ({ strArray, variants, 
   return (
     <>
       {strArray.map((char, i) => (
-        <motion.div variants={variants} viewport={{ once: true }} key={char + i} className={letterClass} style={{ display: "inline-block" }
-        }>
+        <motion.div variants={variants} viewport={{ once: true }} key={char + i}
+          className={letterClass} style={{ display: "inline-block", whiteSpace: "pre" }
+          }>
           {char}
         </motion.div>
       ))}
