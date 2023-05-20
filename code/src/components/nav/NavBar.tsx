@@ -8,10 +8,10 @@ import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
 const NavBar: React.FC = () => {
   return (
     <>
-      <motion.div initial='hidden' animate='visible' variants={lineVariants(5)} className='contact'>
+      <motion.div initial='hidden' animate='visible' variants={lineVariants(5)} viewport={{ once: true }} className='contact'>
         <a href="mailto:quekhouyee@gmail.com">email</a>
       </motion.div>
-      <motion.nav initial='hidden' animate='visible' variants={simpleVariants(true, 0.3)}>
+      <motion.nav initial='hidden' animate='visible' variants={simpleVariants(true, 0.3)} viewport={{ once: true }}>
         <NavLink to="/" end>
           <motion.div variants={iconVariants}>
             <HomeLinkIcon style={{ left: '2vw' }} className="home" />

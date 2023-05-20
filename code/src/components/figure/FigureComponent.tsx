@@ -10,7 +10,7 @@ export interface IFigureComponentProps {
 
 const FigureComponent: React.FC<IFigureComponentProps> = ({ url, alt, cssClass, motionVariant }: IFigureComponentProps) => {
   return (
-    <motion.img initial='hidden' whileInView='visible' variants={motionVariant}
+    <motion.img initial='hidden' whileInView='visible' variants={motionVariant} viewport={{ once: true }}
       src={url} alt={alt} className={cssClass} />
   );
 };

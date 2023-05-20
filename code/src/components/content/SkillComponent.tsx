@@ -30,46 +30,56 @@ const SkillComponent: React.FC<ISkillComponentProps> = ({ isComplete }: ISkillCo
   if (isComplete) {
     return (
       <div className="masonry-with-columns" id="masonry-with-columns">
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' viewport={{ once: true }}
+          variants={skillCardVariants(0)} className="blur">
           <h3>Programming Languages</h3>
           <p><JavaIcon className='skill-svg' /><PythonIcon className='skill-svg' /><TSIcon className='skill-svg' />
             <JSIcon className='skill-svg' /><HtmlIcon className='skill-svg' /><CssIcon className='skill-svg' /></p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Database</h3>
           <p><MongoIcon className='skill-svg' /> <PostgresIcon className='skill-svg' /></p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Framework</h3>
           <p><FlaskIcon className='skill-svg' /> <ReactIcon className='skill-svg' /></p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Operating system</h3>
           <p><LinuxIcon className='skill-svg' />  <WindowsIcon className='skill-svg' /></p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>DevOps</h3>
           <p><GitIcon className='skill-svg' />  <DockerIcon className='skill-svg' />
             <WebpackIcon className='skill-svg' />  <NodeIcon className='skill-svg' />
             <MavenIcon className='skill-svg' />  <ViteIcon className='skill-svg' /></p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Testing</h3>
           <p>JUnit, Mockito, Pytest</p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>API</h3>
           <p>Postman, REST, Java Servlet</p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Modelling software</h3>
           <p>Sketchup, Revit</p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Geospatial software</h3>
           <p>ArcGIS, QGIS, Mapbox, Cesium</p>
         </motion.div>
-        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} className="blur">
+        <motion.div initial='hidden' whileInView='visible' whileHover='hover' variants={skillCardVariants(0)} viewport={{ once: true }}
+          className="blur">
           <h3>Semantic Web</h3>
           <p>SPARQL, RDF, OWL, Blazegraph (NoSQL)</p>
         </motion.div>
@@ -78,7 +88,7 @@ const SkillComponent: React.FC<ISkillComponentProps> = ({ isComplete }: ISkillCo
   } else {
     return (
       <>
-        <motion.div initial='hidden' whileInView='visible' variants={simpleVariants(true)}
+        <motion.div initial='hidden' whileInView='visible' viewport={{ once: true }} variants={simpleVariants(true)}
           className='grid-container content-bottom-spacing'>
           <motion.div variants={iconVariants}><JavaIcon className='grid-skill-svg' /></motion.div>
           <motion.div variants={iconVariants}><PythonIcon className='grid-skill-svg' /></motion.div>

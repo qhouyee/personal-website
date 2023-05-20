@@ -32,14 +32,14 @@ const ProjectComponent: React.FC<IProjectComponentProps> = ({ id, projectName, p
   let target: string = projectUrl.startsWith('http') ? '_blank' : '_self';
   let figVariant: Variants = id % 2 === 0 ? imageVariants(0, true) : imageVariants(0);
   return (
-    <motion.article initial='hidden' whileInView='visible' className='project-layout' >
+    <motion.article initial='hidden' whileInView='visible' viewport={{ once: true }} className='project-layout' >
       <div className='figure-overlay'>
         <motion.h3 variants={paragraphVariants(0)} className='project-title'>{projectName}</motion.h3>
         <NavLink title='project link' to={projectUrl} target={target} className='project-link'>Find out more &#8658;</NavLink>
         <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' motionVariant={figVariant} />
       </div>
       <div>
-        <motion.span initial='hidden' whileInView='visible' className='project-text'>
+        <motion.span initial='hidden' whileInView='visible' viewport={{ once: true }} className='project-text'>
           <motion.h3 variants={paragraphVariants(0)}>Description</motion.h3>
           <motion.p variants={paragraphVariants(0)}>{projectDescription}</motion.p>
           <motion.div variants={iconVariants} className='tech-icons'>

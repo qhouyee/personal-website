@@ -22,7 +22,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
   return (
     <Route>
       <section className='content-container image-text-container section-padding' aria-label='Introduction'>
-        <motion.aside initial='hidden' whileInView='visible' variants={simpleVariants(true)}
+        <motion.aside initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }}
           className='home-text' aria-label='Introduction content'>
           <h1 style={{ marginTop: '15%' }}>
             <AnimatedLetters
@@ -31,7 +31,8 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
               letterClass={letterClass}
             />
             <br />
-            <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1.6)} style={{ fontSize: '2.5rem' }}>
+            <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1.6)} viewport={{ once: true }}
+              style={{ fontSize: '2.5rem' }}>
               <b>Hyde</b> here!
             </motion.p>
           </h1>
@@ -49,7 +50,8 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
       <section ref={ref} className='section-padding ' aria-label='My journey'>
-        <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} className='content-container' >
+        <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }}
+          className='content-container' >
           <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>
             <motion.ul drag="x" dragConstraints={ref} className='drag-container '>
               <p className='side-title '>my journey</p>
@@ -58,14 +60,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </motion.div>
         </motion.article>
       </section>
-      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} aria-label='My skills'>
+      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }} aria-label='My skills'>
         <article className='content-container'>
           <motion.h2 variants={subTitleVariants} className='header-spacing'>Programming Skills<span className='dot'>.</span></motion.h2>
           <SkillComponent isComplete={false} />
         </article>
       </motion.section>
       <motion.section className='content-container section-padding' aria-label='My journey'>
-        <motion.h2 initial='hidden' whileInView='visible' variants={subTitleVariants}>Projects<span className='dot'>.</span></motion.h2>
+        <motion.h2 initial='hidden' whileInView='visible' variants={subTitleVariants} viewport={{ once: true }}>Projects<span className='dot'>.</span></motion.h2>
         <ProjectSection />
       </motion.section>
     </Route>
