@@ -19,7 +19,7 @@ const JobListItem: React.FC<IJobListItemProps> = ({ job }: IJobListItemProps) =>
         <div className="job-description">
           <div className='job-title'>{job.title}</div>
           <div className="job-responsibility">
-            {job.responsibility.map((str) => <div>&#8669; {str} <br /></div>)}
+            {job.responsibility.map((str, index) => <div key={index}>&#8669; {str} <br /></div>)}
           </div>
         </div>
         <div className="job-duration">

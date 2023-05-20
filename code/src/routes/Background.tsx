@@ -63,7 +63,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
         <motion.div variants={swipeRightVariants} className='across-line screen-line alt-background'>
           <motion.ul drag="x" dragConstraints={ref} className="drag-container ">
-            {experiences.map((experience) => <JobListItem job={experience} />)}
+            {experiences.map((experience, index) => <JobListItem key={index} job={experience} />)}
           </motion.ul>
         </motion.div>
       </motion.section>
