@@ -111,9 +111,9 @@ export const iconVariants: Variants = {
   },
 };
 
-export const imageVariants: Variants = (delay: number) => ({
+export const imageVariants: Variants = (delay: number, fromLeft: boolean = false) => ({
   hidden: {
-    x: 100,
+    x: fromLeft ? -100 : 100,
     scale: 0.9,
     opacity: 0,
   },

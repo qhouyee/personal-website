@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { paragraphVariants, iconVariants, imageVariants } from '../../variant/variants';
 import FigureComponent from '../figure/FigureComponent';
 import { ReactComponent as CssIcon } from '../../assets/svg/software/css.svg';
@@ -11,6 +11,7 @@ import { ReactComponent as TSIcon } from '../../assets/svg/software/typescript.s
 import { ReactComponent as ViteIcon } from '../../assets/svg/software/vite.svg';
 
 export interface IProjectComponentProps {
+  id: number;
   projectName: string;
   projectDescription: string;
   projectUrl: string;
@@ -27,14 +28,15 @@ let techIconMap: { [tech: string]: React.FunctionComponent<React.SVGProps<SVGSVG
   'Vite': ViteIcon
 };
 
-const ProjectComponent: React.FC<IProjectComponentProps> = ({ projectName, projectDescription, projectUrl, projectFigureUrl, projectTech }: IProjectComponentProps) => {
+const ProjectComponent: React.FC<IProjectComponentProps> = ({ id, projectName, projectDescription, projectUrl, projectFigureUrl, projectTech }: IProjectComponentProps) => {
   let target: string = projectUrl.startsWith('http') ? '_blank' : '_self';
+  let figVariant: Variants = id % 2 === 0 ? imageVariants(0, true) : imageVariants(0);
   return (
     <motion.article initial='hidden' whileInView='visible' className='project-layout' >
       <div className='figure-overlay'>
         <motion.h3 variants={paragraphVariants(0)} className='project-title'>{projectName}</motion.h3>
         <NavLink title='project link' to={projectUrl} target={target} className='project-link'>Find out more &#8658;</NavLink>
-        <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' motionVariant={imageVariants(0)} />
+        <FigureComponent url={projectFigureUrl} alt='A preview of the project' cssClass='project-figure' motionVariant={figVariant} />
       </div>
       <div>
         <motion.span initial='hidden' whileInView='visible' className='project-text'>

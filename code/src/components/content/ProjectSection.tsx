@@ -37,6 +37,7 @@ const ProjectSection: React.FC<IProjectProps> = (props: IProjectProps) => {
       {projects.map((project, index) => (
         <ProjectComponent
           key={index}
+          id={index}
           projectName={project.projectName}
           projectDescription={project.projectDescription}
           projectUrl={project.projectUrl}
