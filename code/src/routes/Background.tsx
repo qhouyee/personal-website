@@ -52,7 +52,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
           </ul>
         </article>
       </motion.section>
-      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 3.5)} viewport={{ once: true }}
+      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.3 }}
         className='content-container' aria-label='My skills'>
         <motion.h2 variants={subTitleVariants}>Skills<span className='dot'>.</span></motion.h2>
         <motion.p variants={paragraphVariants(0)}>
@@ -60,7 +60,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         </motion.p>
         <SkillComponent isComplete={true} />
       </motion.section>
-      <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)} viewport={{ once: true }}
+      <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)} viewport={{ once: true, amount: 0.4 }}
         className='content-container' aria-label='My working experiences'>
         <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
         <motion.div variants={swipeRightVariants} className='across-line screen-line alt-background'>

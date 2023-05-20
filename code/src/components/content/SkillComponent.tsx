@@ -88,7 +88,7 @@ const SkillComponent: React.FC<ISkillComponentProps> = ({ isComplete }: ISkillCo
   } else {
     return (
       <>
-        <motion.div initial='hidden' whileInView='visible' viewport={{ once: true }} variants={simpleVariants(true)}
+        <motion.div initial='hidden' whileInView='visible' viewport={{ once: true, amount: 0.6 }} variants={simpleVariants(true)}
           className='grid-container content-bottom-spacing'>
           <motion.div variants={iconVariants}><JavaIcon className='grid-skill-svg' /></motion.div>
           <motion.div variants={iconVariants}><PythonIcon className='grid-skill-svg' /></motion.div>
@@ -100,7 +100,7 @@ const SkillComponent: React.FC<ISkillComponentProps> = ({ isComplete }: ISkillCo
           <motion.div variants={iconVariants}><DockerIcon className='grid-skill-svg' /></motion.div>
           <motion.div variants={iconVariants}><GitIcon className='grid-skill-svg' /></motion.div>
         </motion.div>
-        <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1)}
+        <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1)} viewport={{ once: true }}
           className='content-bottom-spacing'>
           For the complete list, please click <NavLink to="/background" end>here</NavLink>
         </motion.p>

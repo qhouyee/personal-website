@@ -50,7 +50,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
       </section>
       <section ref={ref} className='section-padding ' aria-label='My journey'>
-        <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }}
+        <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.6 }}
           className='content-container' >
           <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>
             <motion.ul drag="x" dragConstraints={ref} className='drag-container '>
@@ -60,14 +60,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           </motion.div>
         </motion.article>
       </section>
-      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }} aria-label='My skills'>
+      <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.3 }} aria-label='My skills'>
         <article className='content-container'>
           <motion.h2 variants={subTitleVariants} className='header-spacing'>Programming Skills<span className='dot'>.</span></motion.h2>
           <SkillComponent isComplete={false} />
         </article>
       </motion.section>
       <motion.section className='content-container section-padding' aria-label='My journey'>
-        <motion.h2 initial='hidden' whileInView='visible' variants={subTitleVariants} viewport={{ once: true }}>Projects<span className='dot'>.</span></motion.h2>
+        <motion.h2 initial='hidden' whileInView='visible' variants={subTitleVariants} viewport={{ once: true, amount: 0.6 }}>Projects<span className='dot'>.</span></motion.h2>
         <ProjectSection />
       </motion.section>
     </Route>
