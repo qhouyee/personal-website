@@ -31,14 +31,14 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
               letterClass={letterClass}
             />
             <br />
-            <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(1.6)} viewport={{ once: true }}
+            <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(0.7)} viewport={{ once: true }}
               style={{ fontSize: '2.5rem' }}>
               <b>Hyde</b> here!
             </motion.p>
           </h1>
-          <motion.p variants={paragraphVariants(2.2)} dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
+          <motion.p variants={paragraphVariants(0)} dangerouslySetInnerHTML={{ __html: paragraph[0] }}>
           </motion.p>
-          <motion.div variants={simpleVariants(true, 3.5)} className='svg-container'>
+          <motion.div className='svg-container'>
             <motion.a variants={iconVariants} title='My Github' href='https://github.com/qhouyee' target='_blank'>
               <GithubIcon className='svg-link' />
             </motion.a>
@@ -47,7 +47,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
             </motion.a>
           </motion.div>
         </motion.aside>
-        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(2.6)} />
+        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(0)} />
       </section>
       <section ref={ref} className='section-padding ' aria-label='My journey'>
         <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.6 }}

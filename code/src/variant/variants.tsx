@@ -62,7 +62,7 @@ export const subTitleVariants: Variants = {
   },
 };
 
-export const paragraphVariants: Variants = (delay: number) => ({
+export const paragraphVariants: Variants = (delay: number = 0) => ({
   hidden: {
     y: -20,
     opacity: 0,
