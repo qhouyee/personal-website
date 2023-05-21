@@ -13,12 +13,20 @@ RUN npm install && npm cache clean --force
 COPY ./config  .
 COPY ./template  .
 
-# Second stage: Build image for development environment
-#==================================================================================================
-FROM builder as development
-
 # Copy all the code into the src folder
 COPY ./code/src ./src
 
+# Development stage: Build image for development environment
+#==================================================================================================
+FROM builder as development
+
 # Launch application server in development mode
 CMD ["npm", "run", "dev"]
+
+
+# Production stage: Build image for production environment
+#==================================================================================================
+FROM builder as production
+
+# Launch application server in development mode
+CMD ["npm", "run", "deploy"]
