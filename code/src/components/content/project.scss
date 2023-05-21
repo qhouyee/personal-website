@@ -111,5 +111,17 @@
     .project-text {
       margin: 1rem 0;
     }
+
+    .project-title {
+      left: 1rem !important;
+      font-size: 1rem;
+    }
+
+    .project-link {
+      inset: auto 1rem -3.2rem auto !important;
+      opacity: 1 !important;
+      writing-mode: horizontal-tb !important;
+      z-index: 2;
+    }
   }
 }
