@@ -208,6 +208,13 @@
 @media screen and (max-width: 768px) {
     .image-text-container {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
+        margin-top: 8vh;
+    }
+
+    .char-profile {
+        left: auto;
+        right: auto;
+        margin: 0 0 2rem;
     }
 }
