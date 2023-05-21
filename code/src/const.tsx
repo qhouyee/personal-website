@@ -1,7 +1,6 @@
 export const paragraph: string[] = [
-  'I’m a research software developer from Singapore. <br> \
-  Currently, I’m developing full stack digital twin applications. This involves the visualisation and \
-  integration of 3D building and geospatial data from APIs, sensors, and other data sources.'
+  'I’m a research software developer from Singapore, who is currently developing full stack digital twin applications. \
+  I enjoy this process of integrating various data from building models, APIs, sensors, and other data sources for tangible outputs, and hope to continue doing so.'
 ];
 
 export interface Job {

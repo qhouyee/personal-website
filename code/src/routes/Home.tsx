@@ -21,7 +21,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
         <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.6 }}
           className='content-container' >
           <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>
-            <motion.ul drag="x" dragConstraints={ref} className='drag-container '>
+            <motion.ul drag="x" dragConstraints={ref} className='drag-container'>
               <p className='side-title '>my journey</p>
               {experiences.map((experience, index) => <JobListItem key={index} job={experience} includeAll={false} />)}
             </motion.ul>

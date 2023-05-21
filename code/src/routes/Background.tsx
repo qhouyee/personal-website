@@ -39,17 +39,13 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         <article aria-label='Background introduction'>
           <motion.p variants={paragraphVariants(0)}>I received my Master of Urban Planning and BSc. Real Estate with Honours (Distinction) from the National University of Singapore in July 2021.
             Although my background is unconventional, it has taught me design thinking for user interaction, data visualizations and handling map views.
-            Some of my work can be found over&nbsp;
+            My planning portfolio can be found over&nbsp;
             <a title='Visit my design portfolio on Issuu' href='https://issuu.com/quekhouyee/docs/portfolio' target='_blank'>here</a>.
           </motion.p>
-          <motion.span variants={paragraphVariants(0)}>If you are a fan of reading, I have some publications at:</motion.span>
+          <motion.span variants={paragraphVariants(0)}>If you are a fan of reading, I have a publication at:</motion.span>
           <ul>
             <motion.li variants={paragraphVariants(0)}><div>1) <a title='The conundrum in smart city governance: Interoperability and compatibility in an ever-growing ecosystem of digital twins' href='https://doi.org/10.1017/dap.2023.1' target='_blank'>Data & Policy journal</a>:
               An analysis of the current digital twin approaches and their implications on interoperability and compatibility in the context of smart urbanism.
-            </div></motion.li>
-            <motion.li variants={paragraphVariants(0)}><div>
-              2) <a title='The slow engagement of planning scholars with BIM-GIS-Semantic integration: A literature review' href='https://como.ceb.cam.ac.uk/preprints/296/' target='_blank'>CoMo Preprint</a>:
-              A literature review on BIM-GIS trends for planning processes. Supplemented with data visualizations designed in Python.
             </div></motion.li>
           </ul>
         </article>
@@ -66,7 +62,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
         className='content-container' aria-label='My working experiences'>
         <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
         <motion.div variants={swipeRightVariants} className='across-line screen-line alt-background'>
-          <motion.ul drag="x" dragConstraints={ref} className="drag-container ">
+          <motion.ul drag="x" dragConstraints={ref} className="drag-container">
             {experiences.map((experience, index) => <JobListItem key={index} job={experience} />)}
           </motion.ul>
         </motion.div>
