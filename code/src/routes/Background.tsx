@@ -1,7 +1,8 @@
-import { React, useRef } from 'react';
-import { motion } from "framer-motion";
-import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants } from '../variant/variants';
+import { React, useContext, useRef } from 'react';
+import { motion, Variants } from "framer-motion";
+import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants, mobileImageVariants } from '../variant/variants';
 import { experiences } from '../const';
+import { MobileContext } from '../context/ViewContext';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import JobListItem from '../components/list/JobListItem';
@@ -13,7 +14,8 @@ export interface IBackgroundProps { }
 const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   const titleArray: string[] = ['B', 'a', 'c', 'k', 'g', 'r', 'o', 'u', 'n', 'd'];
   let ref = useRef<HTMLDivElement>(null);
-
+  let isMobile: boolean = useContext(MobileContext);
+  let imageVariant: Variants = isMobile ? mobileImageVariants : imageVariants(0);
   return (
     <Route>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 1.5)} viewport={{ once: true }}
@@ -30,7 +32,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
               This page provides information about me, including my various internships and jobs.
             </motion.p>
           </div>
-          <motion.div className="center" variants={imageVariants(0)}>
+          <motion.div className="center" variants={imageVariant}>
             <SingaporeIcon className='display-profile' />
           </motion.div>
         </article>

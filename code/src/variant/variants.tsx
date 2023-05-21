@@ -114,11 +114,13 @@ export const iconVariants: Variants = {
 export const imageVariants: Variants = (delay: number, fromLeft: boolean = false) => ({
   hidden: {
     x: fromLeft ? -100 : 100,
+    y: 0,
     scale: 0.9,
     opacity: 0,
   },
   visible: {
     x: 0,
+    y: 0,
     scale: 1,
     opacity: 1,
     transition: {
@@ -130,11 +132,13 @@ export const imageVariants: Variants = (delay: number, fromLeft: boolean = false
 
 export const mobileImageVariants: Variants = {
   hidden: {
+    x: 0,
     y: 50,
     scale: 0.9,
     opacity: 0,
   },
   visible: {
+    x: 0,
     y: 0,
     scale: 1,
     opacity: 1,

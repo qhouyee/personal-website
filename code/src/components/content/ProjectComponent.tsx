@@ -1,7 +1,8 @@
-import React from 'react';
+import { React, useContext } from 'react';
 import { NavLink } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
-import { paragraphVariants, iconVariants, imageVariants } from '../../variant/variants';
+import { paragraphVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
+import { MobileContext } from '../../context/ViewContext';
 import FigureComponent from '../figure/FigureComponent';
 import { ReactComponent as CssIcon } from '../../assets/svg/software/css.svg';
 import { ReactComponent as HtmlIcon } from '../../assets/svg/software/html.svg';
@@ -30,7 +31,9 @@ let techIconMap: { [tech: string]: React.FunctionComponent<React.SVGProps<SVGSVG
 
 const ProjectComponent: React.FC<IProjectComponentProps> = ({ id, projectName, projectDescription, projectUrl, projectFigureUrl, projectTech }: IProjectComponentProps) => {
   let target: string = projectUrl.startsWith('http') ? '_blank' : '_self';
-  let figVariant: Variants = id % 2 === 0 ? imageVariants(0, true) : imageVariants(0);
+  let isMobile: boolean = useContext(MobileContext);
+  let figVariant: Variants = isMobile ? mobileImageVariants :
+    id % 2 === 0 ? imageVariants(0, true) : imageVariants(0);
   return (
     <motion.article initial='hidden' whileInView='visible' viewport={{ once: true }} className='project-layout' >
       <div className='figure-overlay'>
