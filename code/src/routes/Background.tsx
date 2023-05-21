@@ -19,7 +19,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 1.5)} viewport={{ once: true }}
         className='content-container' aria-label='My background'>
         <article className='image-text-container' aria-label='Page introduction'>
-          <div style={{ width: '80%' }}>
+          <div>
             <h1>
               <AnimatedLetters
                 strArray={titleArray}
@@ -30,7 +30,7 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
               This page provides information about me, including my various internships and jobs.
             </motion.p>
           </div>
-          <motion.div variants={imageVariants(0)}>
+          <motion.div className="center" variants={imageVariants(0)}>
             <SingaporeIcon className='display-profile' />
           </motion.div>
         </article>

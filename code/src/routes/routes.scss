@@ -41,6 +41,11 @@
     padding-bottom: 6vh;
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .header-spacing {
     margin: 1.5rem 0 1rem;
 }
@@ -76,7 +81,6 @@
     right: 1vw;
     height: auto;
     width: calc(100px + 25vw);
-    margin-left: auto;
 }
 
 .video {
@@ -94,6 +98,7 @@
     left: 1vw;
     height: auto;
     width: 20rem;
+    padding-left: 1rem;
 }
 
 .screen-line {
@@ -197,5 +202,12 @@
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgb(242, 108, 108, 0.5);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        align-items: start;
     }
 }

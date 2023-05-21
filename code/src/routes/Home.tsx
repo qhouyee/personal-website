@@ -47,7 +47,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
             </motion.a>
           </motion.div>
         </motion.aside>
-        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="char-profile" motionVariant={imageVariants(0)} />
+        <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="center char-profile" motionVariant={imageVariants(0)} />
       </section>
       <section ref={ref} className='section-padding ' aria-label='My journey'>
         <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.6 }}
