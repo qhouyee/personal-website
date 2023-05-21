@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { MobileContext } from './context/ViewContext';
 import BackgroundAnimation from './components/animation/BackgroundAnimation';
 import NavBar from './components/nav/NavBar';
 import ErrorPage from './components/error/ErrorPage';
@@ -20,7 +21,6 @@ const router = createBrowserRouter([
         path: "/background",
         element: <Background />,
       },
-      
     ],
     errorElement: <ErrorPage />,
   },
@@ -31,11 +31,20 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC<IAppProps> = (props: IAppProps) => {
+  const [isMobile, setMobile] = useState<boolean>(window.innerWidth <= 768);
+  const updateMedia = (): void => {
+    setMobile(window.innerWidth <= 768);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  }, []);
+
   return (
-    <>
-      <BackgroundAnimation />
-      <RouterProvider router={router} />
-    </>
+    <MobileContext.Provider value={isMobile}>
+        <BackgroundAnimation />
+        <RouterProvider router={router} />
+    </MobileContext.Provider>
   );
 }
 

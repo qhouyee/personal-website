@@ -1,7 +1,8 @@
-import { React, useState, useEffect } from 'react';
+import { React, useContext } from 'react';
 import { motion } from "framer-motion";
 import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { paragraph } from '../../const';
+import { MobileContext } from '../../context/ViewContext';
 import AnimatedLetters from '../animation/AnimatedLetters';
 import FigureComponent from '../figure/FigureComponent';
 import CharProfile from '../../assets/png/charprofile.png';
@@ -26,15 +27,7 @@ const ProfileIcon: React.FC = () => {
 };
 
 const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps) => {
-  const [isMobile, setMobile] = useState<boolean>(window.innerWidth <= 768);
-  const updateMedia = (): void => {
-    setMobile(window.innerWidth <= 768);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
+  let isMobile: boolean = useContext(MobileContext);
   return (
     <>
       {isMobile ? (
