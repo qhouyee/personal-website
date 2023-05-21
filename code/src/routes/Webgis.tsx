@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Route from './Route';
@@ -9,6 +9,10 @@ export interface IWebgisProps { }
 
 const Webgis: React.FC<IWebgisProps> = (props: IWebgisProps) => {
   let titleArray: string[] = ['Cycling', ' ', 'culture', ' ', 'in', ' ', 'Xiamen'];
+  // To ensure route always start at the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AnimatePresence>
       <Route>
