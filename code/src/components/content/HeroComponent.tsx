@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants } from '../../variant/variants';
+import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { paragraph } from '../../const';
 import AnimatedLetters from '../animation/AnimatedLetters';
 import FigureComponent from '../figure/FigureComponent';
@@ -41,7 +41,7 @@ const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps
         <motion.aside initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }}
           className='home-text' aria-label='Introduction content'>
           <div className='image-text-container' aria-label='Page introduction'>
-            <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="center char-profile" motionVariant={imageVariants(0)} />
+            <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="center char-profile" motionVariant={mobileImageVariants} />
             <h1>
               <AnimatedLetters strArray={nameArray} variants={bounceLetterVariants} letterClass={'waviy'} />
             </h1>

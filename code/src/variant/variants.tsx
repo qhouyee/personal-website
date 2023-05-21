@@ -128,6 +128,24 @@ export const imageVariants: Variants = (delay: number, fromLeft: boolean = false
   },
 });
 
+export const mobileImageVariants: Variants = {
+  hidden: {
+    y: 50,
+    scale: 0.9,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      damping: 9,
+      stiffness: 50,
+    }
+  },
+};
+
 export const lineVariants: Variants = (delay: number) => ({
   hidden: {
     clipPath: `inset(100% 0 0 0)`,
