@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import React, { useContext } from 'react';
 import { motion } from "framer-motion";
 import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { paragraph } from '../../const';

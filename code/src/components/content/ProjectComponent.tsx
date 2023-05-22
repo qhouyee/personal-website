@@ -1,4 +1,4 @@
-import { React, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
 import { paragraphVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';

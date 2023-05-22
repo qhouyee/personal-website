@@ -1,4 +1,4 @@
-import { React, useContext, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { motion, Variants } from "framer-motion";
 import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants, mobileImageVariants } from '../variant/variants';
 import { experiences } from '../const';

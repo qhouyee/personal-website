@@ -1,4 +1,4 @@
-import { React, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from "framer-motion";
 import { experiences } from '../const';
 import { simpleVariants, swipeRightVariants, subTitleVariants } from '../variant/variants';

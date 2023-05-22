@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Route from './Route';
