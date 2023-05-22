@@ -1,6 +1,21 @@
 import { Variants } from "framer-motion";
 
-export const simpleVariants: Variants = (shouldStagger: boolean, delay: number = 0, delayChildren: number = delay) => ({
+type staggerVariantsFunction = (
+  shouldStagger: boolean,
+  delay?: number,
+  delayChildren?: number
+) => Variants;
+
+type delayVariantsFunction = (
+  delay?: number,
+) => Variants;
+
+type imageVariantsFunction = (
+  delay: number,
+  fromLeft?: boolean
+) => Variants;
+
+export const simpleVariants: staggerVariantsFunction = (shouldStagger, delay = 0, delayChildren = delay) => ({
   hidden: {
     opacity: 0
   },
@@ -62,7 +77,7 @@ export const subTitleVariants: Variants = {
   },
 };
 
-export const paragraphVariants: Variants = (delay: number = 0) => ({
+export const paragraphVariants: delayVariantsFunction = (delay = 0) => ({
   hidden: {
     y: -20,
     opacity: 0,
@@ -111,7 +126,7 @@ export const iconVariants: Variants = {
   },
 };
 
-export const imageVariants: Variants = (delay: number, fromLeft: boolean = false) => ({
+export const imageVariants: imageVariantsFunction = (delay, fromLeft = false) => ({
   hidden: {
     x: fromLeft ? -100 : 100,
     y: 0,
@@ -150,7 +165,7 @@ export const mobileImageVariants: Variants = {
   },
 };
 
-export const lineVariants: Variants = (delay: number) => ({
+export const lineVariants: delayVariantsFunction = (delay) => ({
   hidden: {
     clipPath: `inset(100% 0 0 0)`,
     opacity: 0,
@@ -165,7 +180,7 @@ export const lineVariants: Variants = (delay: number) => ({
   },
 });
 
-export const skillCardVariants: Variants = (delay: number) => ({
+export const skillCardVariants: delayVariantsFunction = (delay) => ({
   hidden: {
     x: -200,
     opacity: 0,
