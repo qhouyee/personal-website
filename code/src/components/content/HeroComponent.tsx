@@ -5,8 +5,8 @@ import { paragraph } from '../../const';
 import { MobileContext } from '../../context/ViewContext';
 import AnimatedLetters from '../animation/AnimatedLetters';
 import FigureComponent from '../figure/FigureComponent';
-import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
-import { ReactComponent as LinkedinIcon } from '../../assets/svg/linkedin.svg';
+import { ReactComponent as GithubIcon } from '../../svg/github.svg';
+import { ReactComponent as LinkedinIcon } from '../../svg/linkedin.svg';
 
 interface IHeroComponentProps { }
 

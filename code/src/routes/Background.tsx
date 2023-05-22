@@ -7,7 +7,7 @@ import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import JobListItem from '../components/list/JobListItem';
 import SkillComponent from '../components/content/SkillComponent';
-import { ReactComponent as SingaporeIcon } from '../assets/svg/sg.svg';
+import { ReactComponent as SingaporeIcon } from '../svg/sg.svg';
 
 export interface IBackgroundProps { }
 

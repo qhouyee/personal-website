@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import { simpleVariants, iconVariants, lineVariants } from '../../variant/variants';
 import './navbar.scss';
-import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
+import { ReactComponent as HomeLinkIcon } from '../../svg/homenav.svg';
 
 const NavBar: React.FC = () => {
   return (

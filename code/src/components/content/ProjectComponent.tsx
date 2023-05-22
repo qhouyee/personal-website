@@ -4,12 +4,12 @@ import { motion, Variants } from "framer-motion";
 import { paragraphVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { MobileContext } from '../../context/ViewContext';
 import FigureComponent from '../figure/FigureComponent';
-import { ReactComponent as CssIcon } from '../../assets/svg/software/css.svg';
-import { ReactComponent as HtmlIcon } from '../../assets/svg/software/html.svg';
-import { ReactComponent as JSIcon } from '../../assets/svg/software/javascript.svg';
-import { ReactComponent as ReactIcon } from '../../assets/svg/software/react.svg';
-import { ReactComponent as TSIcon } from '../../assets/svg/software/typescript.svg';
-import { ReactComponent as ViteIcon } from '../../assets/svg/software/vite.svg';
+import { ReactComponent as CssIcon } from '../../svg/software/css.svg';
+import { ReactComponent as HtmlIcon } from '../../svg/software/html.svg';
+import { ReactComponent as JSIcon } from '../../svg/software/javascript.svg';
+import { ReactComponent as ReactIcon } from '../../svg/software/react.svg';
+import { ReactComponent as TSIcon } from '../../svg/software/typescript.svg';
+import { ReactComponent as ViteIcon } from '../../svg/software/vite.svg';
 
 export interface IProjectComponentProps {
   id: number;
