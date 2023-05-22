@@ -48,7 +48,7 @@ const ProjectComponent: React.FC<IProjectComponentProps> = ({ id, projectName, p
           <motion.div variants={iconVariants} className='tech-icons'>
             {projectTech.map(tech => {
               let Icon = techIconMap[tech];
-              return Icon ? <Icon key={tech} title={tech} className='tech-svg' /> : null;
+              return Icon ? <Icon key={tech} className='tech-svg' /> : null;
             })}
           </motion.div>
         </motion.span>

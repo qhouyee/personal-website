@@ -28,7 +28,7 @@ const Webgis: React.FC<IWebgisProps> = (props: IWebgisProps) => {
             <b>Description:</b> <br />The goal of this school project is to collect and process datasets for visualization on a web GIS platform. Our team has chosen to use a dataset from Xiamen, which includes information about public transport and cycling infrastructure, as well as cycling journeys. We specifically use the ArcGIS API to develop map views with interactive elements and embed them in a HTML and CSS website.
           </motion.p>
           <motion.p variants={paragraphVariants(0)}>Please see the video below for our demo:</motion.p>
-          <motion.iframe variants={iconVariants} className='video' width="560" height="260" src="https://www.youtube.com/embed/6LlBX-7IFb0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></motion.iframe>
+          <motion.iframe variants={iconVariants} className='video' width="560" height="260" src="https://www.youtube.com/embed/6LlBX-7IFb0?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></motion.iframe>
         </motion.div>
       </Route>
     </AnimatePresence>

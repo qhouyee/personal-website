@@ -5,7 +5,7 @@ export interface IFigureComponentProps {
   url: string | undefined;
   alt: string;
   cssClass?: string;
-  motionVariant: Variants;
+  motionVariant?: Variants;
 }
 
 const FigureComponent: React.FC<IFigureComponentProps> = ({ url, alt, cssClass, motionVariant }: IFigureComponentProps) => {

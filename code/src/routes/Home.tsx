@@ -23,7 +23,7 @@ const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
           <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>
             <motion.ul drag="x" dragConstraints={ref} className='drag-container'>
               <p className='side-title '>my journey</p>
-              {experiences.map((experience, index) => <JobListItem key={index} job={experience} includeAll={false} />)}
+              {experiences.map((experience, index) => <JobListItem key={index} job={experience} />)}
             </motion.ul>
           </motion.div>
         </motion.article>
