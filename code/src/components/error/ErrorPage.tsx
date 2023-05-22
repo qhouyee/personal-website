@@ -4,12 +4,11 @@ import FigureComponent from '../figure/FigureComponent';
 import NotFoundImage from '../../assets/png/404.png';
 import { ReactComponent as HomeLinkIcon } from '../../assets/svg/homenav.svg';
 
-
 export interface IErrorPageProps { }
 
 const ErrorPage: React.FC<IErrorPageProps> = (props: IErrorPageProps) => {
-  const error = useRouteError();
-  if (error.status === 404) {
+  const error: unknown = useRouteError();
+  if ((error as { status?: number })?.status === 404) {
 
     return (
       <div id="center-page-container">
@@ -31,7 +30,7 @@ const ErrorPage: React.FC<IErrorPageProps> = (props: IErrorPageProps) => {
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        <i>{(error as { statusText?: string })?.statusText || (error as Error)?.message}</i>
       </p>
     </div>
   );
