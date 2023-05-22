@@ -13,6 +13,8 @@ RUN npm install && npm cache clean --force
 COPY ./config  .
 COPY ./template  .
 
+# Copy all the static assets into the public folder
+COPY ./code/assets ./public
 # Copy all the code into the src folder
 COPY ./code/src ./src
 
