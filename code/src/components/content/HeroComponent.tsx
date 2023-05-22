@@ -5,7 +5,6 @@ import { paragraph } from '../../const';
 import { MobileContext } from '../../context/ViewContext';
 import AnimatedLetters from '../animation/AnimatedLetters';
 import FigureComponent from '../figure/FigureComponent';
-import CharProfile from '../../assets/png/charprofile.png';
 import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/svg/linkedin.svg';
 
@@ -28,6 +27,7 @@ const ProfileIcon: React.FC = () => {
 
 const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps) => {
   let isMobile: boolean = useContext(MobileContext);
+  let CharProfile: string = '/png/charprofile.png';
   return (
     <>
       {isMobile ? (
