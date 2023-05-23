@@ -1,15 +1,15 @@
-import { React, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from "react-router-dom";
 import { motion, Variants } from "framer-motion";
 import { paragraphVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { MobileContext } from '../../context/ViewContext';
 import FigureComponent from '../figure/FigureComponent';
-import { ReactComponent as CssIcon } from '../../assets/svg/software/css.svg';
-import { ReactComponent as HtmlIcon } from '../../assets/svg/software/html.svg';
-import { ReactComponent as JSIcon } from '../../assets/svg/software/javascript.svg';
-import { ReactComponent as ReactIcon } from '../../assets/svg/software/react.svg';
-import { ReactComponent as TSIcon } from '../../assets/svg/software/typescript.svg';
-import { ReactComponent as ViteIcon } from '../../assets/svg/software/vite.svg';
+import { ReactComponent as CssIcon } from '../../svg/software/css.svg';
+import { ReactComponent as HtmlIcon } from '../../svg/software/html.svg';
+import { ReactComponent as JSIcon } from '../../svg/software/javascript.svg';
+import { ReactComponent as ReactIcon } from '../../svg/software/react.svg';
+import { ReactComponent as TSIcon } from '../../svg/software/typescript.svg';
+import { ReactComponent as ViteIcon } from '../../svg/software/vite.svg';
 
 export interface IProjectComponentProps {
   id: number;
@@ -48,7 +48,7 @@ const ProjectComponent: React.FC<IProjectComponentProps> = ({ id, projectName, p
           <motion.div variants={iconVariants} className='tech-icons'>
             {projectTech.map(tech => {
               let Icon = techIconMap[tech];
-              return Icon ? <Icon key={tech} title={tech} className='tech-svg' /> : null;
+              return Icon ? <Icon key={tech} className='tech-svg' /> : null;
             })}
           </motion.div>
         </motion.span>

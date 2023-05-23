@@ -1,13 +1,12 @@
-import { React, useContext } from 'react';
+import React, { useContext } from 'react';
 import { motion } from "framer-motion";
 import { simpleVariants, paragraphVariants, bounceLetterVariants, iconVariants, imageVariants, mobileImageVariants } from '../../variant/variants';
 import { paragraph } from '../../const';
 import { MobileContext } from '../../context/ViewContext';
 import AnimatedLetters from '../animation/AnimatedLetters';
 import FigureComponent from '../figure/FigureComponent';
-import CharProfile from '../../assets/png/charprofile.png';
-import { ReactComponent as GithubIcon } from '../../assets/svg/github.svg';
-import { ReactComponent as LinkedinIcon } from '../../assets/svg/linkedin.svg';
+import { ReactComponent as GithubIcon } from '../../svg/github.svg';
+import { ReactComponent as LinkedinIcon } from '../../svg/linkedin.svg';
 
 interface IHeroComponentProps { }
 
@@ -28,6 +27,7 @@ const ProfileIcon: React.FC = () => {
 
 const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps) => {
   let isMobile: boolean = useContext(MobileContext);
+  let CharProfile: string = '/png/charprofile.png';
   return (
     <>
       {isMobile ? (

@@ -1,4 +1,4 @@
-import { React, useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { motion, Variants } from "framer-motion";
 import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants, mobileImageVariants } from '../variant/variants';
 import { experiences } from '../const';
@@ -7,7 +7,7 @@ import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import JobListItem from '../components/list/JobListItem';
 import SkillComponent from '../components/content/SkillComponent';
-import { ReactComponent as SingaporeIcon } from '../assets/svg/sg.svg';
+import { ReactComponent as SingaporeIcon } from '../svg/sg.svg';
 
 export interface IBackgroundProps { }
 
@@ -16,6 +16,10 @@ const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
   let ref = useRef<HTMLDivElement>(null);
   let isMobile: boolean = useContext(MobileContext);
   let imageVariant: Variants = isMobile ? mobileImageVariants : imageVariants(0);
+  // To ensure route always start at the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Route>
       <motion.section initial='hidden' whileInView='visible' variants={simpleVariants(true, 1.5)} viewport={{ once: true }}

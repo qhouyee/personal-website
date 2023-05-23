@@ -1,6 +1,4 @@
 import React from 'react';
-import Portfolio from '../../assets/png/portfolio.png';
-import CyclingAnalysis from '../../assets/png/giscycling.png';
 import ProjectComponent from './ProjectComponent';
 import './project.scss';
 
@@ -19,14 +17,14 @@ let projects: Project[] = [
     projectName: '1. PORTFOLIO',
     projectDescription: '- Designed and developed a portfolio site to experiment with front end technologies and showcase my skills.',
     projectUrl: 'https://github.com/qhouyee/personal-website',
-    projectFigureUrl: Portfolio,
+    projectFigureUrl: '/png/portfolio.png',
     projectTech: ['HTML', 'CSS', 'Typescript', 'React', 'Vite'],
   },
   {
     projectName: '2. CYCLING CULTURE IN XIAMEN',
     projectDescription: '- Conducted a geospatial analysis of the cycling infrastructure in Xiamen for a university module. \n - Experiment with ArcGIS geospatial web visualization capabilities.',
     projectUrl: '/webgis',
-    projectFigureUrl: CyclingAnalysis,
+    projectFigureUrl: '/png/giscycling.png',
     projectTech: ['HTML', 'CSS', 'Javascript'],
   },
 ];

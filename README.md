@@ -23,3 +23,10 @@ In the development environment, hot reloading is enabled, and any changes to the
 docker-compose up -d
 ```
 If successfully run, the website will be available at `http://localhost:3000/`
+
+### 2.2.2 Production
+With Docker running, navigate to the `<root>` directory and run the following code in a CLI:
+```
+docker compose -f "./docker-compose.prod.yml" up -d --build 
+```
+The outputs will be available in the build folder for your deployment.
