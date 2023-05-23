@@ -31,7 +31,7 @@
 
   @for $i from 1 through 10 {
     div:nth-child(#{$i}) {
-      $h: (random(1000)/500+8)+rem;
+      $h: calc(random(1000)/500)*1rem;
       width: $h;
     }
 
