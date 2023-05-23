@@ -25,10 +25,9 @@ FROM builder as development
 # Launch application server in development mode
 CMD ["npm", "run", "dev"]
 
-
 # Production stage: Build image for production environment
 #==================================================================================================
 FROM builder as production
 
-# Launch application server in development mode
-CMD ["npm", "run", "deploy"]
+# Compile the scripts for a production build
+CMD ["npm", "run", "build"]

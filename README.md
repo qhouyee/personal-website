@@ -29,3 +29,4 @@ With Docker running, navigate to the `<root>` directory and run the following co
 ```
 docker compose -f "./docker-compose.prod.yml" up -d --build 
 ```
+The outputs will be available in the build folder for your deployment.

@@ -6,3 +6,5 @@ services:
     build:
       context: .
       target: production
+    volumes:
+      - ./build:/home/node/build

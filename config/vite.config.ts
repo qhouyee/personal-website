@@ -12,5 +12,8 @@ export default defineConfig({
     host: true, // needed for the Docker Container port mapping to work
     strictPort: true,
     port: 8080, // container port
-  }
+  },
+  build: {
+    outDir: 'build',
+  },
 })
