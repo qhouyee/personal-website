@@ -8,8 +8,6 @@ import Home from './routes/Home';
 import Background from './routes/Background';
 import Webgis from './routes/Webgis';
 
-export interface IAppProps { }
-
 const router = createBrowserRouter([
   {
     element: <NavBar />,
@@ -30,7 +28,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App: React.FC<IAppProps> = (props: IAppProps) => {
+const App: React.FC<{}> = () => {
   const [isMobile, setMobile] = useState<boolean>(window.innerWidth <= 768);
   const updateMedia = (): void => {
     setMobile(window.innerWidth <= 768);
@@ -42,10 +40,10 @@ const App: React.FC<IAppProps> = (props: IAppProps) => {
 
   return (
     <MobileContext.Provider value={isMobile}>
-        <BackgroundAnimation />
-        <RouterProvider router={router} />
+      <BackgroundAnimation />
+      <RouterProvider router={router} />
     </MobileContext.Provider>
   );
-}
+};
 
-export default App
+export default App;

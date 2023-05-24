@@ -5,9 +5,7 @@ import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
 import { simpleVariants, titleVariants, paragraphVariants, iconVariants } from '../variant/variants';
 
-export interface IWebgisProps { }
-
-const Webgis: React.FC<IWebgisProps> = (props: IWebgisProps) => {
+const Webgis: React.FC<{}> = () => {
   let titleArray: string[] = ['Cycling', ' ', 'culture', ' ', 'in', ' ', 'Xiamen'];
   // To ensure route always start at the top
   useEffect(() => {

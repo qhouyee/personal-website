@@ -8,7 +8,6 @@ export interface IJobListItemProps {
   job: Job;
 }
 
-
 const JobListItem: React.FC<IJobListItemProps> = ({ job }: IJobListItemProps) => {
   return (
     <motion.li initial='hidden' whileInView='visible' viewport={{ margin: "0px -40%" }} variants={jobCardVariants}>
@@ -28,6 +27,6 @@ const JobListItem: React.FC<IJobListItemProps> = ({ job }: IJobListItemProps) =>
       </div>
     </motion.li>
   );
-}
+};
 
 export default JobListItem;

@@ -5,7 +5,7 @@ import { simpleVariants, iconVariants, lineVariants } from '../../variant/varian
 import './navbar.scss';
 import { ReactComponent as HomeLinkIcon } from '../../svg/homenav.svg';
 
-const NavBar: React.FC = () => {
+const NavBar: React.FC<{}> = () => {
   return (
     <>
       <motion.div initial='hidden' animate='visible' variants={lineVariants(2)} viewport={{ once: true }} className='contact'>

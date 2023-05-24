@@ -1,10 +1,7 @@
 import React from 'react';
-import './backgroundanimation.scss';
+import './animation.scss';
 
-export interface IBackgroundAnimationProps {
-}
-
-const BackgroundAnimation: React.FC<IBackgroundAnimationProps> = (props: IBackgroundAnimationProps) => {
+const BackgroundAnimation: React.FC<{}> = () => {
   return (
     <>
       <div id="pixels"></div>

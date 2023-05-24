@@ -9,9 +9,7 @@ import JobListItem from '../components/list/JobListItem';
 import SkillComponent from '../components/content/SkillComponent';
 import { ReactComponent as SingaporeIcon } from '../svg/sg.svg';
 
-export interface IBackgroundProps { }
-
-const Background: React.FC<IBackgroundProps> = (props: IBackgroundProps) => {
+const Background: React.FC<{}> = () => {
   const titleArray: string[] = ['B', 'a', 'c', 'k', 'g', 'r', 'o', 'u', 'n', 'd'];
   let ref = useRef<HTMLDivElement>(null);
   let isMobile: boolean = useContext(MobileContext);

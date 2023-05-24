@@ -8,11 +8,9 @@ import FigureComponent from '../figure/FigureComponent';
 import { ReactComponent as GithubIcon } from '../../svg/github.svg';
 import { ReactComponent as LinkedinIcon } from '../../svg/linkedin.svg';
 
-interface IHeroComponentProps { }
-
 let nameArray: string[] = ['H', 'e', 'l', 'l', 'o'];
 
-const ProfileIcon: React.FC = () => {
+const ProfileIcon: React.FC<{}> = () => {
   return (
     <motion.div className='svg-container'>
       <motion.a variants={iconVariants} title='My Github' href='https://github.com/qhouyee' target='_blank'>
@@ -25,7 +23,7 @@ const ProfileIcon: React.FC = () => {
   );
 };
 
-const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps) => {
+const HeroComponent: React.FC<{}> = () => {
   let isMobile: boolean = useContext(MobileContext);
   let CharProfile: string = '/png/charprofile.png';
   return (
@@ -36,7 +34,7 @@ const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps
           <div className='image-text-container' aria-label='Page introduction'>
             <FigureComponent url={CharProfile} alt={'An illustration of my inner mind'} cssClass="center char-profile" motionVariant={mobileImageVariants} />
             <h1>
-              <AnimatedLetters strArray={nameArray} variants={bounceLetterVariants} letterClass={'waviy'} />
+              <AnimatedLetters strArray={nameArray} variants={bounceLetterVariants} letterClass={'hello'} />
             </h1>
             <h1>
               <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(0.7)} viewport={{ once: true }}
@@ -55,7 +53,7 @@ const HeroComponent: React.FC<IHeroComponentProps> = (props: IHeroComponentProps
           <motion.aside initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true }}
             className='home-text' aria-label='Introduction content'>
             <h1 style={{ margin: '0' }}>
-              <AnimatedLetters strArray={nameArray} variants={bounceLetterVariants} letterClass={'waviy'} />
+              <AnimatedLetters strArray={nameArray} variants={bounceLetterVariants} letterClass={'hello'} />
             </h1>
             <h1>
               <motion.p initial='hidden' whileInView='visible' variants={paragraphVariants(0.7)} viewport={{ once: true }}

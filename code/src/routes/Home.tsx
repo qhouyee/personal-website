@@ -8,16 +8,14 @@ import SkillComponent from '../components/content/SkillComponent';
 import ProjectSection from '../components/content/ProjectSection';
 import JobListItem from '../components/list/JobListItem';
 
-export interface IHomeProps { }
-
-const Home: React.FC<IHomeProps> = (props: IHomeProps) => {
+const Home: React.FC<{}> = () => {
   let ref = useRef<HTMLDivElement>(null);
   return (
     <Route>
       <section className='content-container image-text-container section-padding' aria-label='Introduction'>
         <HeroComponent />
       </section>
-      <section ref={ref} className='section-padding ' aria-label='My journey'>
+      <section ref={ref} className='section-padding' aria-label='My journey'>
         <motion.article initial='hidden' whileInView='visible' variants={simpleVariants(true)} viewport={{ once: true, amount: 0.6 }}
           className='content-container' >
           <motion.div variants={swipeRightVariants} className='timeline-edges screen-line alt-background'>

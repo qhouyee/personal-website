@@ -3,10 +3,8 @@ import { useRouteError, NavLink } from "react-router-dom";
 import FigureComponent from '../figure/FigureComponent';
 import { ReactComponent as HomeLinkIcon } from '../../svg/homenav.svg';
 
-export interface IErrorPageProps { }
-
-const ErrorPage: React.FC<IErrorPageProps> = (props: IErrorPageProps) => {
-  const error: unknown = useRouteError();
+const ErrorPage: React.FC<{}> = () => {
+  let error: unknown = useRouteError();
   let NotFoundImage: string = '../../assets/png/404.png';
   if ((error as { status?: number })?.status === 404) {
 
@@ -35,6 +33,5 @@ const ErrorPage: React.FC<IErrorPageProps> = (props: IErrorPageProps) => {
     </div>
   );
 }
-
 
 export default ErrorPage;

@@ -2,8 +2,6 @@ import React from 'react';
 import ProjectComponent from './ProjectComponent';
 import './project.scss';
 
-interface IProjectProps { }
-
 interface Project {
   projectName: string;
   projectDescription: string;
@@ -29,7 +27,7 @@ let projects: Project[] = [
   },
 ];
 
-const ProjectSection: React.FC<IProjectProps> = (props: IProjectProps) => {
+const ProjectSection: React.FC<{}> = () => {
   return (
     <>
       {projects.map((project, index) => (
@@ -45,6 +43,6 @@ const ProjectSection: React.FC<IProjectProps> = (props: IProjectProps) => {
       ))}
     </>
   );
-}
+};
 
 export default ProjectSection;

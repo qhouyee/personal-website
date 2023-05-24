@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion, Variants } from "framer-motion";
-import './animation.scss';
 
 export interface IAnimatedLettersProps {
   strArray: string[];
