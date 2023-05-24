@@ -1,5 +1,5 @@
 # 1. Introduction
-This git repository contains the code for my personal website at: ... It is currently under construction. 
+This git repository contains the code for my personal website at https://qhouyee.github.io/ 
 
 # 2. Code Builds
 The project can be built either locally or on the Docker platform.
