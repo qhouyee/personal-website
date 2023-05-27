@@ -202,12 +202,14 @@ export const skillCardVariants: delayVariantsFunction = (delay) => ({
 
 export const jobCardVariants: Variants = {
   hidden: {
-    scale: 0.8,
+    scale: 0.6,
     opacity: 0.6,
+    y:-100,
   },
   visible: {
     scale: 1,
     opacity: 1,
+    y:0,
     transition: {
       type: "spring",
       damping: 11,

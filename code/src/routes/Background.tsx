@@ -1,17 +1,16 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { motion, Variants } from "framer-motion";
-import { simpleVariants, swipeRightVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants, mobileImageVariants } from '../variant/variants';
+import { simpleVariants, titleVariants, subTitleVariants, paragraphVariants, imageVariants, mobileImageVariants } from '../variant/variants';
 import { experiences } from '../const';
 import { MobileContext } from '../context/ViewContext';
 import Route from './Route';
 import AnimatedLetters from '../components/animation/AnimatedLetters';
-import JobListItem from '../components/list/JobListItem';
 import SkillComponent from '../components/content/SkillComponent';
+import JobSection from '../components/content/JobSection';
 import { ReactComponent as SingaporeIcon } from '../svg/sg.svg';
 
 const Background: React.FC<{}> = () => {
   const titleArray: string[] = ['B', 'a', 'c', 'k', 'g', 'r', 'o', 'u', 'n', 'd'];
-  let ref = useRef<HTMLDivElement>(null);
   let isMobile: boolean = useContext(MobileContext);
   let imageVariant: Variants = isMobile ? mobileImageVariants : imageVariants(0);
   // To ensure route always start at the top
@@ -60,15 +59,7 @@ const Background: React.FC<{}> = () => {
         </motion.p>
         <SkillComponent isComplete={true} />
       </motion.section>
-      <motion.section ref={ref} initial='hidden' whileInView='visible' variants={simpleVariants(false)} viewport={{ once: true, amount: 0.4 }}
-        className='content-container' aria-label='My working experiences'>
-        <motion.h2 variants={subTitleVariants}>Experiences<span className='dot'>.</span></motion.h2>
-        <motion.div variants={swipeRightVariants} className='across-line screen-line alt-background'>
-          <motion.ul drag="x" dragConstraints={ref} className="drag-container">
-            {experiences.map((experience, index) => <JobListItem key={index} job={experience} />)}
-          </motion.ul>
-        </motion.div>
-      </motion.section>
+      <JobSection title='Experiences' />
     </Route>
   );
 };
